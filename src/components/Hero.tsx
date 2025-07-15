@@ -125,7 +125,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
               <img
                 src="/qw.jpg"
                 alt="Vipun Sanjana"
-                className="w-full h-full object-cover"
+                className="cursor-pointer w-full h-full object-cover"
               />
             </div>
           </div>
