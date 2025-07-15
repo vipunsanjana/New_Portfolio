@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Github, Calendar, Tag } from 'lucide-react';
+import { Github, Calendar } from 'lucide-react';
 
 interface ProjectsProps {
   darkMode: boolean;
@@ -8,64 +8,96 @@ interface ProjectsProps {
 const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, inventory management, and admin dashboard.',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Redis'],
-      githubUrl: '#',
-      liveUrl: '#',
+      title: 'Phishing Analysis & First-Response Automation',
+      description: 'Comprehensive research project implementing automated phishing detection and response systems. Features real-time threat analysis, automated incident response workflows, and integration with multiple security platforms.',
+      image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['Python', 'Ballerina', 'MongoDB', 'Docker', 'Azure Logic Apps', 'ServiceNow', 'OpenAI', 'KQL'],
+      githubUrl: 'Private Repository',
       date: '2024',
-      category: 'Full Stack'
+      category: 'Research',
+      deployment: 'Choreo Platform'
     },
     {
-      title: 'Task Management App',
-      description: 'Collaborative task management application with real-time updates, team workspaces, and advanced filtering. Built with modern React and Firebase.',
-      image: 'https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'Firebase', 'TypeScript', 'Tailwind CSS'],
-      githubUrl: '#',
-      liveUrl: '#',
+      title: 'University Z-Score Analysis System',
+      description: 'Advanced analytics platform analyzing island-wide Z-score data to recommend suitable university courses. Features comprehensive data processing, predictive analytics, and responsive course recommendation engine.',
+      image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['Python FastAPI', 'Angular NX', 'AWS', 'CI/CD', 'Shell Scripting', 'Google Sheet API'],
+      githubUrl: [
+        'https://github.com/vipunsanjana/university-project-mobile-computing-backend.git',
+        'https://github.com/vipunsanjana/university-project-mobile-computing-frontend.git'
+      ],
       date: '2024',
-      category: 'Frontend'
+      category: 'Mobile Computing',
+      deployment: 'AWS with CI/CD'
     },
     {
-      title: 'Weather Analytics Dashboard',
-      description: 'Real-time weather data visualization dashboard with interactive charts, historical data analysis, and location-based forecasting.',
-      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'D3.js', 'Express.js', 'MongoDB'],
-      githubUrl: '#',
-      liveUrl: '#',
-      date: '2023',
-      category: 'Full Stack'
-    },
-    {
-      title: 'Mobile Banking App',
-      description: 'Secure mobile banking application with biometric authentication, transaction history, and financial analytics. Built with React Native.',
+      title: 'MediConnect - Medical Web Application',
+      description: 'Full-stack medical web application enabling patients to book online doctor appointments and access essential health services. Built for local client with high-performance architecture and secure authentication.',
       image: 'https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React Native', 'Node.js', 'JWT', 'SQLite'],
-      githubUrl: '#',
-      liveUrl: '#',
-      date: '2023',
-      category: 'Mobile'
+      technologies: ['MERN Stack', 'Firebase Auth', 'Node.js', 'MongoDB', 'React TypeScript', 'AWS'],
+      githubUrl: 'Private Repository',
+      date: '2024',
+      category: 'Full Stack',
+      deployment: 'Production Live'
     },
     {
-      title: 'AI Content Generator',
-      description: 'AI-powered content generation tool with multiple templates, real-time preview, and export functionality. Integrated with OpenAI API.',
-      image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Next.js', 'OpenAI API', 'Prisma', 'PostgreSQL'],
-      githubUrl: '#',
-      liveUrl: '#',
-      date: '2023',
-      category: 'Full Stack'
+      title: 'Hospital Management System Backend',
+      description: 'Robust backend system for hospital management with comprehensive patient records, appointment scheduling, and administrative features. Currently serving in production environment.',
+      image: 'https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=800',
+      githubUrl: 'Private Repository',
+      date: '2024',
+      category: 'Backend',
+      deployment: 'Production Live'
     },
     {
-      title: 'Real Estate Platform',
-      description: 'Comprehensive real estate platform with property listings, virtual tours, mortgage calculator, and agent dashboard.',
+      title: 'Real-Time Chat Application',
+      description: 'High-performance real-time chat platform with instant messaging capabilities. Implemented socket-based communication for seamless user experience and real-time message delivery.',
+      image: 'https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['MERN Stack', 'WebSockets', 'Socket.io', 'MongoDB', 'React'],
+      githubUrl: 'https://github.com/vipunsanjana/Real-time-chat-application',
+      date: '2024',
+      category: 'Full Stack',
+      deployment: 'GitHub'
+    },
+    {
+      title: 'IoT Agriculture Monitoring System',
+      description: 'Smart irrigation system monitoring soil moisture, temperature, and humidity. Features real-time data visualization and remote control capabilities through mobile application.',
+      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['C++', 'NodeMCU ESP8266', 'Blynk IoT', 'Arduino IDE', 'Sensor Integration'],
+      githubUrl: 'Private Repository',
+      date: '2023',
+      category: 'IoT',
+      deployment: 'Blynk Platform'
+    },
+    {
+      title: 'Land Sale Mobile Application',
+      description: 'Cross-platform mobile application for real estate listings with real-time database synchronization. Users can browse, post, and manage land listings with live updates.',
       image: 'https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'Django', 'PostgreSQL', 'AWS S3'],
-      githubUrl: '#',
-      liveUrl: '#',
-      date: '2022',
-      category: 'Full Stack'
+      technologies: ['Flutter', 'Firebase Realtime DB', 'Dart', 'Firebase Auth'],
+      githubUrl: 'https://github.com/vipunsanjana/LandSalemobileApp',
+      date: '2024',
+      category: 'Mobile',
+      deployment: 'Firebase'
+    },
+    {
+      title: 'Advanced Task Management System',
+      description: 'Enterprise-level task management system with role-based access control, JWT authentication, and comprehensive admin/employee dashboards for efficient workflow management.',
+      image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['Spring Boot', 'AngularJS', 'MySQL', 'JWT', 'REST API'],
+      githubUrl: 'https://github.com/vipunsanjana/AdvancedTaskMangamentSystem.git',
+      date: '2023',
+      category: 'Full Stack',
+      deployment: 'Self-hosted'
+    },
+    {
+      title: 'Laundromat Service Mobile App',
+      description: 'Custom mobile solution for local laundromat business enabling service scheduling, order tracking, and digital payment processing. Developed as freelance project with complete business integration.',
+      image: 'https://images.pexels.com/photos/5591663/pexels-photo-5591663.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['Flutter', 'Firebase', 'Payment Gateway', 'Push Notifications'],
+      githubUrl: 'Private Repository',
+      date: '2024',
+      category: 'Mobile',
+      deployment: 'Client Production'
     }
   ];
 
@@ -83,7 +115,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
           <p className={`text-lg sm:text-xl px-4 ${
             darkMode ? 'text-gray-400' : 'text-gray-600'
           }`}>
-            Some of my recent work
+            Real-world solutions and research implementations
           </p>
         </div>
 
@@ -110,6 +142,15 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
                     {project.category}
                   </span>
                 </div>
+                <div className="absolute bottom-4 left-4">
+                  <span className={`px-2 py-1 rounded text-xs font-medium ${
+                    darkMode 
+                      ? 'bg-blue-600/80 text-white' 
+                      : 'bg-blue-600/80 text-white'
+                  }`}>
+                    {project.deployment}
+                  </span>
+                </div>
               </div>
 
               <div className="p-4 sm:p-6">
@@ -132,7 +173,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, techIndex) => (
+                  {project.technologies && project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
                       className={`px-2 py-1 rounded text-xs font-medium ${
@@ -146,33 +187,73 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
                   ))}
                 </div>
 
-                <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
-                  <a
-                    href={project.githubUrl}
-                    className={`flex items-center justify-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                      darkMode 
-                        ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' 
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
-                  >
-                    <Github className="w-4 h-4" />
-                    <span>Code</span>
-                  </a>
-                  <a
-                    href={project.liveUrl}
-                    className={`flex items-center justify-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                      darkMode 
-                        ? 'bg-blue-600 text-white hover:bg-blue-700' 
-                        : 'bg-blue-600 text-white hover:bg-blue-700'
-                    }`}
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    <span>Live Demo</span>
-                  </a>
+                <div className="flex justify-center">
+                  {Array.isArray(project.githubUrl) ? (
+                    <div className="flex flex-col w-full space-y-2">
+                      {project.githubUrl.map((url, idx) => (
+                        <a
+                          key={idx}
+                          href={url}
+                          className={`flex items-center justify-center space-x-2 px-6 py-2 rounded-lg text-sm font-medium transition-colors w-full ${
+                            darkMode 
+                              ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' 
+                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                          }`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Github className="w-4 h-4" />
+                          <span>View Code {project.githubUrl.length > 1 ? idx + 1 : ''}</span>
+                        </a>
+                      ))}
+                    </div>
+                  ) : (
+                    <a
+                      href={typeof project.githubUrl === 'string' ? project.githubUrl : '#'}
+                      className={`flex items-center justify-center space-x-2 px-6 py-2 rounded-lg text-sm font-medium transition-colors w-full ${
+                        project.githubUrl === 'Private Repository' || project.githubUrl === '#'
+                          ? darkMode 
+                            ? 'bg-gray-700 text-gray-400 cursor-not-allowed' 
+                            : 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                          : darkMode 
+                            ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' 
+                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      }`}
+                      {...(project.githubUrl === 'Private Repository' || project.githubUrl === '#' 
+                        ? { onClick: (e) => e.preventDefault() } 
+                        : { target: '_blank', rel: 'noopener noreferrer' }
+                      )}
+                    >
+                      <Github className="w-4 h-4" />
+                      <span>
+                        {project.githubUrl === 'Private Repository' 
+                          ? 'Private Repository'  
+                          : 'View Code'
+                        }
+                      </span>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Additional Info Section */}
+        <div className={`mt-16 text-center p-8 rounded-xl ${
+          darkMode ? 'bg-gray-800' : 'bg-gray-50'
+        }`}>
+          <h3 className={`text-xl font-bold mb-4 ${
+            darkMode ? 'text-white' : 'text-gray-900'
+          }`}>
+            Backend Development Expertise
+          </h3>
+          <p className={`text-sm ${
+            darkMode ? 'text-gray-300' : 'text-gray-600'
+          }`}>
+            Specialized in developing scalable backend modules using <strong>NestJS</strong> framework, 
+            with extensive experience in microservices architecture, API development, and cloud deployment strategies.
+          </p>
         </div>
       </div>
     </section>

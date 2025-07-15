@@ -1,217 +1,305 @@
 import React from 'react';
-import { Award, Calendar, ExternalLink, CheckCircle } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 interface CertificationsProps {
   darkMode: boolean;
 }
 
 const Certifications: React.FC<CertificationsProps> = ({ darkMode }) => {
-  const certifications = [
+  const licenses = [
     {
-      title: 'AWS Certified Solutions Architect',
-      issuer: 'Amazon Web Services',
-      date: '2024',
-      credentialId: 'AWS-SAA-2024-001',
-      image: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=400',
-      verifyUrl: '#',
-      skills: ['Cloud Architecture', 'AWS Services', 'Security', 'Scalability'],
-      status: 'Active',
-      description: 'Validates expertise in designing distributed systems on AWS platform with focus on security, reliability, and cost optimization.'
+      title: 'Getting Started With Ansible',
+      issuer: 'Simplilearn',
+      date: 'Jul 2025',
+      logo: '/Simplilearn_Logo.jpg',
+      skills: ['Ansible', 'Automation'],
+      verifyUrl: 'simpli-web.app.link/e/tZHLLSCEWUb',
     },
     {
-      title: 'Google Cloud Professional Developer',
-      issuer: 'Google Cloud',
-      date: '2024',
-      credentialId: 'GCP-PD-2024-002',
-      image: 'https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=400',
+      title: 'Oracle MySQL HeatWave Certification',
+      issuer: 'Oracle',
+      date: 'Pending',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg',
+      skills: ['MySQL', 'HeatWave', 'Cloud Database'],
       verifyUrl: '#',
-      skills: ['GCP Services', 'Kubernetes', 'DevOps', 'Microservices'],
-      status: 'Active',
-      description: 'Demonstrates ability to design, build, and deploy applications on Google Cloud Platform using best practices.'
+      status: 'Pending',
     },
     {
-      title: 'Microsoft Azure Developer Associate',
+      title: 'Oracle Cloud Infrastructure 2025 Foundations Associate (1Z0-1085-25)',
+      issuer: 'Oracle',
+      date: 'Jul 2025',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg',
+      skills: ['Cloud Infrastructure', 'Oracle Cloud', 'Cloud Computing'],
+      verifyUrl: 'https://mylearn.oracle.com/ou/learning-path/become-an-oci-foundations-associate-2025/148056',
+    },
+    {
+      title: 'Oracle Cloud Infrastructure For AWS Architects - 2025',
+      issuer: 'Oracle',
+      date: 'Jul 2025',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg',
+      skills: ['Cloud Infrastructure', 'AWS', 'OCI'],
+      verifyUrl: 'https://mylearn.oracle.com/ou/learning-path/oci-for-aws-architects-2025/145594',
+    },
+    {
+      title: 'AWS Educate Getting Started with Serverless',
+      issuer: 'Amazon Web Services (AWS)',
+      date: 'Jun 2025',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
+      skills: ['AWS', 'Serverless', 'Cloud'],
+      verifyUrl: 'https://www.credly.com/badges/c6be0d43-8416-445d-86ee-4ee6098dcda4/public_url',
+    },
+    {
+      title: 'AWS Getting Started with Security',
+      issuer: 'Amazon Web Services (AWS)',
+      date: 'Jun 2025',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
+      skills: ['AWS', 'Cloud Security'],
+      verifyUrl: 'https://www.credly.com/badges/1b27c464-d795-4499-9f86-4d29abd7466b/public_url',
+    },
+    {
+      title: 'Describe Cloud Computing',
       issuer: 'Microsoft',
-      date: '2023',
-      credentialId: 'AZ-204-2023-003',
-      image: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=400',
+      date: 'Jun 2025',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg',
+      skills: [],
       verifyUrl: '#',
-      skills: ['Azure Services', 'API Development', 'Security', 'Monitoring'],
-      status: 'Active',
-      description: 'Validates skills in developing cloud solutions that span compute, storage, security, and monitoring on Azure.'
     },
     {
-      title: 'Certified Kubernetes Administrator',
-      issuer: 'Cloud Native Computing Foundation',
-      date: '2023',
-      credentialId: 'CKA-2023-004',
-      image: 'https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=400',
-      verifyUrl: '#',
-      skills: ['Kubernetes', 'Container Orchestration', 'DevOps', 'Linux'],
-      status: 'Active',
-      description: 'Demonstrates expertise in Kubernetes administration including cluster management, networking, and troubleshooting.'
+      title: 'Describe Cloud Service Types',
+      issuer: 'Microsoft',
+      date: 'Jun 2025',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg',
+      skills: [],
+      verifyUrl: 'https://learn.microsoft.com/api/achievements/share/en-us/VIPUNSANJANAJAYATHUNGA-8962/QS8J8C9E?sharingId=5E468DF1804EB536',
     },
     {
-      title: 'MongoDB Certified Developer',
-      issuer: 'MongoDB Inc.',
-      date: '2023',
-      credentialId: 'MDB-DEV-2023-005',
-      image: 'https://images.pexels.com/photos/1181316/pexels-photo-1181316.jpeg?auto=compress&cs=tinysrgb&w=400',
-      verifyUrl: '#',
-      skills: ['MongoDB', 'NoSQL', 'Database Design', 'Performance Tuning'],
-      status: 'Active',
-      description: 'Validates proficiency in MongoDB development including data modeling, querying, and performance optimization.'
+      title: 'Describe Cost Management in Azure',
+      issuer: 'Microsoft',
+      date: 'Jun 2025',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg',
+      skills: [],
+      verifyUrl: 'https://learn.microsoft.com/api/achievements/share/en-us/VIPUNSANJANAJAYATHUNGA-8962/4GF5Y5AK?sharingId=5E468DF1804EB536',
     },
     {
-      title: 'React Developer Certification',
-      issuer: 'Meta (Facebook)',
-      date: '2022',
-      credentialId: 'META-REACT-2022-006',
-      image: 'https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=400',
+      title: 'Describe Monitoring Tools in Azure',
+      issuer: 'Microsoft',
+      date: 'Jun 2025',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg',
+      skills: [],
+      verifyUrl: 'https://learn.microsoft.com/api/achievements/share/en-us/VIPUNSANJANAJAYATHUNGA-8962/FMS2LBRX?sharingId=5E468DF1804EB536',
+    },
+    {
+      title: 'Manage Security Controls for Identity and Access',
+      issuer: 'Microsoft',
+      date: 'Jun 2025',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg',
+      skills: [],
+      verifyUrl: 'https://learn.microsoft.com/api/achievements/share/en-us/VIPUNSANJANAJAYATHUNGA-8962/UR4XDYN3?sharingId=5E468DF1804EB536',
+    },
+    {
+      title: 'Microsoft Certified: Azure Fundamentals: Describe Azure Management and Governance',
+      issuer: 'Microsoft',
+      date: 'Jun 2025',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg',
+      skills: [],
+      verifyUrl: 'https://learn.microsoft.com/api/achievements/share/en-us/VIPUNSANJANAJAYATHUNGA-8962/CXEN42H9?sharingId=5E468DF1804EB536',
+    },
+    {
+      title: 'Microsoft Certified: Azure Fundamentals: Describe Cloud Concepts',
+      issuer: 'Microsoft',
+      date: 'Jun 2025',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg',
+      skills: [],
+      verifyUrl: 'https://learn.microsoft.com/api/achievements/share/en-us/VIPUNSANJANAJAYATHUNGA-8962/UR4XKTJ3?sharingId=5E468DF1804EB536',
+    },
+    {
+      title: 'AWS Educate Getting Started with Databases',
+      issuer: 'Amazon Web Services (AWS)',
+      date: 'May 2025',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
+      skills: [],
+      verifyUrl: 'https://www.credly.com/badges/d258705d-baa8-44d5-bac8-b0ac27fbacc7/public_url',
+    },
+    {
+      title: 'AWS Educate Getting Started with Networking',
+      issuer: 'Amazon Web Services (AWS)',
+      date: 'May 2025',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
+      skills: [],
+      verifyUrl: 'https://www.credly.com/badges/dcd05a69-a8d5-4437-91ab-60e66d4c8f06/public_url',
+    },
+    {
+      title: 'A – Z DevOps Course | Comprehensive Journey from Beginner to Expert',
+      issuer: 'ClouDev Technologies',
+      date: 'Apr 2025',
+      logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV4So0vlPtGs6LOYUC9cvHnD4i5XM4b5bLfA&s',
+      skills: ['DevOps'],
+      verifyUrl: '',
+    },
+    {
+      title: 'AWS Educate - Introduction to Cloud 101',
+      issuer: 'Amazon Web Services (AWS)',
+      date: 'Apr 2025',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
+      skills: [],
+      verifyUrl: 'https://www.credly.com/badges/42f11e7d-abeb-4381-9f47-76aff8f8de90/public_url',
+    },
+    {
+      title: 'AWS Educate Getting Started With Compute',
+      issuer: 'Amazon Web Services (AWS)',
+      date: 'Apr 2025',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
+      skills: ['Amazon Web Services (AWS)', 'Amazon EC2'],
       verifyUrl: '#',
-      skills: ['React', 'JavaScript', 'Frontend Development', 'State Management'],
-      status: 'Active',
-      description: 'Comprehensive certification covering React fundamentals, advanced patterns, and modern development practices.'
-    }
+    },
+    {
+      title: 'AWS Getting Started With Storage',
+      issuer: 'Amazon Web Services (AWS)',
+      date: 'Apr 2025',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
+      skills: [],
+      verifyUrl: 'https://www.credly.com/badges/2a52e42d-2eab-4d51-81c0-d5bdde698a26/public_url',
+    },
+    {
+      title: 'Describe Features and Tools for Managing and Deploying Azure Resources',
+      issuer: 'Microsoft',
+      date: 'Jun 2025',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg',
+      skills: [],
+      verifyUrl: 'https://learn.microsoft.com/api/achievements/share/en-us/VIPUNSANJANAJAYATHUNGA-8962/8ZDATQJW?sharingId=5E468DF1804EB536',
+    },
   ];
 
   return (
-    <section id="certifications" className={`py-20 ${
-      darkMode ? 'bg-gray-900' : 'bg-white'
-    }`}>
+    <section
+      id="certifications"
+      className={`py-20 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}
+    >
       <div className="container mx-auto px-4">
+        {/* Licenses & Certifications Section */}
         <div className="text-center mb-16">
-          <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-6 px-4 ${
-            darkMode ? 'text-white' : 'text-gray-900'
-          }`}>
-            Certifications & Achievements
+          <h2
+            className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-6 px-4 ${
+              darkMode ? 'text-white' : 'text-gray-900'
+            }`}
+          >
+            Licenses & Certifications
           </h2>
-          <p className={`text-lg sm:text-xl px-4 ${
-            darkMode ? 'text-gray-400' : 'text-gray-600'
-          }`}>
+          <p
+            className={`text-lg sm:text-xl px-4 ${
+              darkMode ? 'text-gray-400' : 'text-gray-600'
+            }`}
+          >
             Professional certifications and industry recognition
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4">
-          {certifications.map((cert, index) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 mb-20">
+          {licenses.map((license, index) => (
             <div
               key={index}
               className={`rounded-xl overflow-hidden ${
                 darkMode ? 'bg-gray-800' : 'bg-white'
-              } shadow-lg hover:shadow-xl transition-all duration-300 group border ${
+              } shadow-lg border ${
                 darkMode ? 'border-gray-700' : 'border-gray-100'
-              }`}
+              } transition-transform duration-300 hover:shadow-xl hover:scale-105 cursor-pointer`}
             >
-              <div className="relative overflow-hidden">
+              <div className="p-6 flex flex-col items-center text-center">
                 <img
-                  src={cert.image}
-                  alt={cert.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  src={license.logo}
+                  alt={license.issuer}
+                  className="h-12 mb-4 object-contain"
                 />
-                <div className="absolute top-4 left-4">
-                  <div className={`flex items-center space-x-1 px-3 py-1 rounded-full text-xs font-medium ${
-                    cert.status === 'Active' 
-                      ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400'
-                      : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400'
-                  }`}>
-                    <CheckCircle className="w-3 h-3" />
-                    <span>{cert.status}</span>
-                  </div>
-                </div>
-                <div className="absolute top-4 right-4">
-                  <Award className={`w-6 h-6 ${
-                    darkMode ? 'text-yellow-400' : 'text-yellow-500'
-                  }`} />
-                </div>
-              </div>
-
-              <div className="p-4 sm:p-6">
-                <div className="mb-4">
-                  <h3 className={`text-base sm:text-lg font-bold mb-2 ${
+                <h3
+                  className={`font-bold text-lg mb-1 ${
                     darkMode ? 'text-white' : 'text-gray-900'
-                  }`}>
-                    {cert.title}
-                  </h3>
-                  <p className={`text-xs sm:text-sm font-medium ${
+                  }`}
+                >
+                  {license.title}
+                </h3>
+                <p
+                  className={`text-xs sm:text-sm font-medium mb-1 ${
                     darkMode ? 'text-blue-400' : 'text-blue-600'
-                  }`}>
-                    {cert.issuer}
-                  </p>
-                </div>
-
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 text-xs sm:text-sm space-y-1 sm:space-y-0">
-                  <div className={`flex items-center space-x-1 ${
-                    darkMode ? 'text-gray-400' : 'text-gray-600'
-                  }`}>
-                    <Calendar className="w-4 h-4" />
-                    <span>{cert.date}</span>
-                  </div>
-                  <span className={`text-xs ${
-                    darkMode ? 'text-gray-500' : 'text-gray-500'
-                  }`}>
-                    ID: {cert.credentialId}
-                  </span>
-                </div>
-
-                <p className={`text-xs sm:text-sm mb-4 leading-relaxed ${
-                  darkMode ? 'text-gray-300' : 'text-gray-600'
-                }`}>
-                  {cert.description}
+                  }`}
+                >
+                  {license.issuer}
                 </p>
-
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {cert.skills.map((skill, skillIndex) => (
+                <p
+                  className={`text-xs mb-3 ${
+                    darkMode ? 'text-gray-400' : 'text-gray-600'
+                  }`}
+                >
+                  Issued {license.date}
+                </p>
+                <div className="flex flex-wrap justify-center gap-2 mb-4">
+                  {license.skills.map((skill, i) => (
                     <span
-                      key={skillIndex}
+                      key={i}
                       className={`px-2 py-1 rounded text-xs font-medium ${
-                        darkMode 
-                          ? 'bg-gray-700 text-gray-300' 
+                        darkMode
+                          ? 'bg-gray-700 text-gray-300'
                           : 'bg-gray-100 text-gray-700'
+                      } transition-colors duration-200 hover:${
+                        darkMode ? 'bg-gray-600 text-white' : 'bg-gray-300'
                       }`}
                     >
                       {skill}
                     </span>
                   ))}
                 </div>
-
+       {license.verifyUrl && license.verifyUrl !== '#' && (
                 <a
-                  href={cert.verifyUrl}
+                  href={license.verifyUrl}
                   className={`inline-flex items-center space-x-2 px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors w-full justify-center ${
-                    darkMode 
-                      ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                    darkMode
+                      ? 'bg-blue-600 text-white hover:bg-blue-700'
                       : 'bg-blue-600 text-white hover:bg-blue-700'
                   }`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  <span>Verify Certificate</span>
+                  <span>Verify</span>
                 </a>
+              )}
               </div>
             </div>
           ))}
         </div>
 
-        <div className={`mt-16 text-center p-6 sm:p-8 rounded-xl mx-4 ${
-          darkMode ? 'bg-gray-800' : 'bg-gray-50'
-        }`}>
-          <h3 className={`text-xl sm:text-2xl font-bold mb-4 ${
-            darkMode ? 'text-white' : 'text-gray-900'
-          }`}>
+        <div
+          className={`mt-16 text-center p-6 sm:p-8 rounded-xl mx-4 ${
+            darkMode ? 'bg-gray-800' : 'bg-gray-50'
+          }`}
+        >
+          <h3
+            className={`text-xl sm:text-2xl font-bold mb-4 ${
+              darkMode ? 'text-white' : 'text-gray-900'
+            }`}
+          >
             Continuous Learning
           </h3>
-          <p className={`text-base sm:text-lg mb-6 ${
-            darkMode ? 'text-gray-300' : 'text-gray-600'
-          }`}>
-            I'm committed to staying current with the latest technologies and industry best practices.
-            Currently pursuing additional certifications in AI/ML and advanced cloud architectures.
+          <p
+            className={`text-base sm:text-lg mb-6 ${
+              darkMode ? 'text-gray-300' : 'text-gray-600'
+            }`}
+          >
+            I'm committed to staying current with the latest technologies and
+            industry best practices. Currently pursuing additional
+            certifications in AI/ML and advanced cloud architectures.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            {['AI/ML Specialization', 'Advanced DevOps', 'Cybersecurity', 'Internet Of Things'].map((course, index) => (
+            {[
+              'AI/ML Specialization',
+              'Advanced DevOps',
+              'Cybersecurity',
+              'Internet Of Things',
+            ].map((course, index) => (
               <span
                 key={index}
                 className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium ${
-                  darkMode 
-                    ? 'bg-gray-700 text-blue-400 border border-gray-600' 
+                  darkMode
+                    ? 'bg-gray-700 text-blue-400 border border-gray-600'
                     : 'bg-blue-100 text-blue-800 border border-blue-200'
                 }`}
               >
