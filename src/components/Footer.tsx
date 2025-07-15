@@ -24,7 +24,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
             darkMode ? 'text-gray-300' : 'text-gray-700'
           }`}
         >
-          © 2025 Vipun Sanjana | All rights reserved.
+          © 2025 Vipun Sanjana
           <Heart className="w-4 h-4 text-red-500 fill-current inline-block" />
         </p>
         <button
