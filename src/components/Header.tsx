@@ -22,21 +22,26 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
     setIsMenuOpen(false);
   };
 
-  const navItems = ['About', 'Skills', 'Projects', 'Experience', 'Certifications', 'Contact'];
+  const navItems = [
+    { name: 'About', id: 'about' },
+    { name: 'Projects', id: 'projects' },
+    { name: 'Contact', id: 'contact' },
+    { name: 'Skills', id: 'skills' },
+    { name: 'Experience', id: 'experience' },
+    { name: 'Certifications', id: 'certifications' }
+  ];
 
   return (
     <header
-      className={`mt-0fixed top-0 left-0 right-0 z-50 transition-all duration-300
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
         ${scrolled
           ? `${darkMode ? 'bg-gray-900/95' : 'bg-white/95'} backdrop-blur-sm shadow-lg`
           : 'bg-transparent'}
-        h-20 
       `}
     >
-      {/* increased vertical padding for breathing room */}
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* brand */}
+          {/* Brand */}
           <div className="flex items-center space-x-2">
             <Code className={`w-8 h-8 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} />
             <span className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>
@@ -44,17 +49,17 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             </span>
           </div>
 
-          {/* desktop nav */}
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map(item => (
               <button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase())}
+                key={item.name}
+                onClick={() => scrollToSection(item.id)}
                 className={`font-medium transition-colors hover:text-blue-600 text-sm lg:text-base
                   ${darkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700'}
                 `}
               >
-                {item}
+                {item.name}
               </button>
             ))}
             <button
@@ -69,8 +74,8 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             </button>
           </nav>
 
-          {/* mobile toggles */}
-          <div className="md:hidden flex items-center space-x-4">
+          {/* Mobile Controls */}
+          <div className="md:hidden flex items-center space-x-2">
             <button
               onClick={toggleDarkMode}
               className={`p-2 rounded-lg transition-colors
@@ -93,33 +98,44 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             </button>
           </div>
         </div>
+      </div>
 
-        {/* mobile menu */}
-        {isMenuOpen && (
+      {/* Mobile Menu - Fixed positioning */}
+      {isMenuOpen && (
+        <div className="md:hidden fixed top-20 left-0 right-0 z-40">
           <div
-            className={`
-              md:hidden mt-4 py-4 rounded-lg border mx-4 backdrop-blur-sm
+            className={`mx-4 mt-2 py-4 rounded-lg border shadow-xl backdrop-blur-sm
               ${darkMode
-                ? 'bg-gray-800/95 border-gray-700'
+                ? 'bg-gray-900/95 border-gray-700'
                 : 'bg-white/95 border-gray-200'}
             `}
           >
-            <nav className="flex flex-col space-y-2">
+            <nav className="flex flex-col">
               {navItems.map(item => (
                 <button
-                  key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`text-left px-4 py-2 font-medium transition-colors hover:text-blue-600
-                    ${darkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700'}
+                  key={item.name}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`text-left px-6 py-3 font-medium transition-colors border-b last:border-b-0
+                    ${darkMode 
+                      ? 'text-gray-300 hover:text-blue-400 hover:bg-gray-800/50 border-gray-700' 
+                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50 border-gray-200'}
                   `}
                 >
-                  {item}
+                  {item.name}
                 </button>
               ))}
             </nav>
           </div>
-        )}
-      </div>
+        </div>
+      )}
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div 
+          className="md:hidden fixed inset-0 bg-black/20 z-30"
+          onClick={() => setIsMenuOpen(false)}
+        />
+      )}
     </header>
   );
 };
