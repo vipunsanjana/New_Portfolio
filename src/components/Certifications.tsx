@@ -62,7 +62,7 @@ const Certifications: React.FC<CertificationsProps> = ({ darkMode }) => {
       date: 'Jun 2025',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg',
       skills: [],
-      verifyUrl: '#',
+      verifyUrl: 'https://learn.microsoft.com/api/achievements/share/en-us/VIPUNSANJANAJAYATHUNGA-8962/QS8J8C9E?sharingId=5E468DF1804EB536',
     },
     {
       title: 'Describe Cloud Service Types',
