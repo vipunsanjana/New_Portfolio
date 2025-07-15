@@ -120,7 +120,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* 👇 Adjusted margin */}
-          <div className="mb-8 mt-20 sm:mt-10">
+          <div className="mb-8 mt-24 sm:mt-16">
             <div className={`w-48 h-48 mx-auto mb-10 rounded-full overflow-hidden border-4 ${darkMode ? 'border-blue-500' : 'border-blue-600'} shadow-2xl transition-all duration-300 hover:scale-105`}>
               <img
                 src="/qw.jpg"

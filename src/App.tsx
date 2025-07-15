@@ -8,6 +8,7 @@ import Experience from './components/Experience';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Education from './components/Education';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -31,6 +32,7 @@ function App() {
         <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Hero darkMode={darkMode} />
         <About darkMode={darkMode} />
+        <Education darkMode={darkMode} />
         <Skills darkMode={darkMode} />
         <Projects darkMode={darkMode} />
         <Experience darkMode={darkMode} />

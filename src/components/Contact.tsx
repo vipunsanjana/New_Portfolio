@@ -51,9 +51,10 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
     <section id="contact" className={`py-20 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className={`text-4xl font-bold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+          <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
             Get In Touch
           </h2>
+          <div className={`w-24 h-1 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full`}></div>
           <p className={`text-lg ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
             Let's discuss your next project
           </p>

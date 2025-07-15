@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Code, Moon, Sun } from 'lucide-react';
+import {
+  Menu, X, Code, Moon, Sun,
+  User, Book, Laptop, Mail, Award, Briefcase, BadgeCheck
+} from 'lucide-react';
 
 interface HeaderProps {
   darkMode: boolean;
@@ -23,12 +26,13 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
   };
 
   const navItems = [
-    { name: 'About', id: 'about' },
-    { name: 'Projects', id: 'projects' },
-    { name: 'Contact', id: 'contact' },
-    { name: 'Skills', id: 'skills' },
-    { name: 'Experience', id: 'experience' },
-    { name: 'Certifications', id: 'certifications' }
+    { name: 'About', id: 'about', icon: <User className="w-5 h-5 mr-2" /> },
+    { name: 'Education', id: 'education', icon: <Book className="w-5 h-5 mr-2" /> },
+    { name: 'Projects', id: 'projects', icon: <Laptop className="w-5 h-5 mr-2" /> },
+    { name: 'Contact', id: 'contact', icon: <Mail className="w-5 h-5 mr-2" /> },
+    { name: 'Skills', id: 'skills', icon: <Award className="w-5 h-5 mr-2" /> },
+    { name: 'Experience', id: 'experience', icon: <Briefcase className="w-5 h-5 mr-2" /> },
+    { name: 'Certifications', id: 'certifications', icon: <BadgeCheck className="w-5 h-5 mr-2" /> }
   ];
 
   return (
@@ -100,7 +104,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
         </div>
       </div>
 
-      {/* Mobile Menu - Fixed positioning */}
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden fixed top-20 left-0 right-0 z-40">
           <div
@@ -115,12 +119,13 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-left px-6 py-3 font-medium transition-colors border-b last:border-b-0
+                  className={`flex items-center text-left px-6 py-3 font-medium transition-colors border-b last:border-b-0
                     ${darkMode 
                       ? 'text-gray-300 hover:text-blue-400 hover:bg-gray-800/50 border-gray-700' 
                       : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50 border-gray-200'}
                   `}
                 >
+                  {item.icon}
                   {item.name}
                 </button>
               ))}

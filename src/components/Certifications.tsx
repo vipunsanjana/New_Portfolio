@@ -185,6 +185,7 @@ const Certifications: React.FC<CertificationsProps> = ({ darkMode }) => {
           >
             Licenses & Certifications
           </h2>
+          <div className={`w-24 h-1 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full`}></div>
           <p
             className={`text-lg sm:text-xl px-4 ${
               darkMode ? 'text-gray-400' : 'text-gray-600'

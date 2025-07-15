@@ -11,9 +11,9 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
       title: 'Phishing Analysis & First-Response Automation',
       description: 'Comprehensive research project implementing automated phishing detection and response systems. Features real-time threat analysis, automated incident response workflows, and integration with multiple security platforms.',
       image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Python', 'Ballerina', 'MongoDB', 'Docker', 'Azure Logic Apps', 'ServiceNow', 'OpenAI', 'KQL'],
+      technologies: ['Python', 'Ballerina', 'MongoDB', 'Docker', 'Azure Logic Apps', 'ServiceNow', 'OpenAI', 'KQL', 'Firebase', 'React', 'Google APIs'],
       githubUrl: 'Private Repository',
-      date: '2024',
+      date: '2025',
       category: 'Research',
       deployment: 'Choreo Platform'
     },
@@ -26,7 +26,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         'https://github.com/vipunsanjana/university-project-mobile-computing-backend.git',
         'https://github.com/vipunsanjana/university-project-mobile-computing-frontend.git'
       ],
-      date: '2024',
+      date: '2025',
       category: 'Mobile Computing',
       deployment: 'AWS with CI/CD'
     },
@@ -112,6 +112,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
           }`}>
             Featured Projects
           </h2>
+          <div className={`w-24 h-1 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full`}></div>
           <p className={`text-lg sm:text-xl px-4 ${
             darkMode ? 'text-gray-400' : 'text-gray-600'
           }`}>

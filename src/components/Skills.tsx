@@ -49,6 +49,7 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
           }`}>
             Skills & Technologies
           </h2>
+          <div className={`w-24 h-1 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full`}></div>
           <p className={`text-lg md:text-xl max-w-2xl mx-auto ${
             darkMode ? 'text-gray-400' : 'text-gray-600'
           }`}>
