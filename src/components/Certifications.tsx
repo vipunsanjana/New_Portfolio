@@ -150,7 +150,7 @@ const Certifications: React.FC<CertificationsProps> = ({ darkMode }) => {
       date: 'Apr 2025',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
       skills: ['Amazon Web Services (AWS)', 'Amazon EC2'],
-      verifyUrl: '#',
+      verifyUrl: 'https://www.credly.com/badges/42f11e7d-abeb-4381-9f47-76aff8f8de90/public_url',
     },
     {
       title: 'AWS Getting Started With Storage',
