@@ -57,71 +57,36 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
     </div>
   );
 
-  const TechStack = ({
-    name,
-    className,
-    delay = 0
-  }: {
-    name: string;
-    className: string;
-    delay?: number;
-  }) => (
-    <div
-      className={`absolute ${className} opacity-30 hover:opacity-70 transition-all duration-500 cursor-pointer group`}
-      style={{
-        animation: `float 8s ease-in-out infinite`,
-        animationDelay: `${delay}s`
-      }}
-    >
-      <div className={`px-4 py-2 rounded-full ${darkMode ? 'bg-gray-800/40' : 'bg-white/40'} backdrop-blur-sm border ${darkMode ? 'border-gray-700' : 'border-gray-200'} group-hover:scale-105 transition-transform duration-300`}>
-        <span className={`text-sm font-mono ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-          {name}
-        </span>
-      </div>
-    </div>
-  );
-
   return (
     <section className={`min-h-screen flex items-center justify-center relative overflow-hidden ${darkMode ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900' : 'bg-gradient-to-br from-blue-50 via-white to-indigo-50'}`}>
       {/* Background Grid */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
 
-      {/* Floating Icons Left */}
-      <div className="hidden lg:block">
-        <FloatingLogo icon={Code} className="top-20 left-20" delay={0} name="Code" />
-        <FloatingLogo icon={Database} className="top-40 left-40" delay={1} name="Database" />
-        <FloatingLogo icon={Server} className="top-60 left-20" delay={2} name="Server" />
-        <FloatingLogo icon={GitBranch} className="top-80 left-32" delay={3} name="Git" />
-        <FloatingLogo icon={Terminal} className="bottom-40 left-24" delay={4} name="Terminal" />
-        <FloatingLogo icon={CloudLightning} className="bottom-60 left-40" delay={5} name="Cloud" />
+      {/* Floating Icons - Left */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <FloatingLogo icon={Code} className="top-10 left-4 md:top-20 md:left-20" delay={0} name="Code" />
+        <FloatingLogo icon={Database} className="top-24 left-12 md:top-40 md:left-40" delay={1} name="Database" />
+        <FloatingLogo icon={Server} className="top-40 left-6 md:top-60 md:left-20" delay={2} name="Server" />
+        <FloatingLogo icon={GitBranch} className="top-64 left-16 md:top-80 md:left-32" delay={3} name="Git" />
+        <FloatingLogo icon={Terminal} className="bottom-24 left-10 md:bottom-40 md:left-24" delay={4} name="Terminal" />
+        <FloatingLogo icon={CloudLightning} className="bottom-40 left-12 md:bottom-60 md:left-40" delay={5} name="Cloud" />
       </div>
 
-      {/* Floating Icons Right */}
-      <div className="hidden lg:block">
-        <FloatingLogo icon={Cpu} className="top-20 right-20" delay={1.5} name="CPU" />
-        <FloatingLogo icon={Zap} className="top-40 right-40" delay={2.5} name="Performance" />
-        <FloatingLogo icon={Code} className="top-60 right-20" delay={3.5} name="Code" />
-        <FloatingLogo icon={Database} className="top-80 right-32" delay={4.5} name="Database" />
-        <FloatingLogo icon={Server} className="bottom-40 right-24" delay={5.5} name="Server" />
-        <FloatingLogo icon={Terminal} className="bottom-60 right-40" delay={0.5} name="Terminal" />
-      </div>
-
-      {/* Tech Stack for Mobile */}
-      <div className="hidden md:block lg:hidden">
-        <TechStack name="React" className="top-20 left-8" delay={0} />
-        <TechStack name="Node.js" className="top-32 right-8" delay={1} />
-        <TechStack name="Python" className="top-44 left-12" delay={2} />
-        <TechStack name="Docker" className="top-56 right-12" delay={3} />
-        <TechStack name="AWS" className="bottom-32 left-8" delay={4} />
-        <TechStack name="MongoDB" className="bottom-44 right-8" delay={5} />
+      {/* Floating Icons - Right */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <FloatingLogo icon={Cpu} className="top-12 right-6 md:top-20 md:right-20" delay={1.5} name="CPU" />
+        <FloatingLogo icon={Zap} className="top-32 right-12 md:top-40 md:right-40" delay={2.5} name="Performance" />
+        <FloatingLogo icon={Code} className="top-48 right-6 md:top-60 md:right-20" delay={3.5} name="Code" />
+        <FloatingLogo icon={Database} className="top-72 right-10 md:top-80 md:right-32" delay={4.5} name="Database" />
+        <FloatingLogo icon={Server} className="bottom-24 right-6 md:bottom-40 md:right-24" delay={5.5} name="Server" />
+        <FloatingLogo icon={Terminal} className="bottom-40 right-10 md:bottom-60 md:right-40" delay={0.5} name="Terminal" />
       </div>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          {/* 👇 Adjusted margin */}
           <div className="mb-8 mt-24 sm:mt-16">
-            <div className={`w-48 h-48 mx-auto mb-10 rounded-full overflow-hidden border-4 ${darkMode ? 'border-blue-500' : 'border-blue-600'} shadow-2xl transition-all duration-300 hover:scale-105`}>
+            <div className={`w-48 h-48 mx-auto mb-12 rounded-full overflow-hidden border-4 ${darkMode ? 'border-blue-500' : 'border-blue-600'} shadow-2xl transition-all duration-300 hover:scale-105`}>
               <img
                 src="/qw.jpg"
                 alt="Vipun Sanjana"
@@ -143,7 +108,6 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
             Passionate about building scalable applications that make a difference.
           </p>
 
-          {/* Typewriter */}
           <div className="mb-6">
             <span className={`text-lg sm:text-xl font-mono ${darkMode ? 'text-blue-400' : 'text-blue-600'}`}>
               {text}
@@ -180,6 +144,8 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
                 key={index}
                 href={social.href}
                 className={`p-3 rounded-lg transition-all duration-300 hover:scale-110 ${darkMode ? 'bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-blue-400' : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-blue-600'} shadow-lg hover:shadow-xl`}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <social.icon className="w-6 h-6" />
               </a>
