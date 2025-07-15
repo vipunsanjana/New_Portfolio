@@ -298,7 +298,7 @@ const Certifications: React.FC<CertificationsProps> = ({ darkMode }) => {
             ].map((course, index) => (
               <span
                 key={index}
-                className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium ${
+                className={`cursor-pointer px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium ${
                   darkMode
                     ? 'bg-gray-700 text-blue-400 border border-gray-600'
                     : 'bg-blue-100 text-blue-800 border border-blue-200'

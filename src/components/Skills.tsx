@@ -61,7 +61,7 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
           {techDetails.map((tech, index) => (
             <div
               key={index}
-              className={`flex items-start gap-4 p-6 rounded-2xl shadow-lg transform transition-transform duration-300 hover:scale-105 ${
+              className={`cursor-pointer flex items-start gap-4 p-6 rounded-2xl shadow-lg transform transition-transform duration-300 hover:scale-105 ${
                 darkMode
                   ? 'bg-gray-800/60 backdrop-blur-md border border-gray-700 text-gray-300 hover:border-blue-500'
                   : 'bg-white/60 backdrop-blur-md border border-gray-200 text-gray-800 hover:border-blue-600'

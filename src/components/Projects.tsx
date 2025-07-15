@@ -124,7 +124,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`rounded-xl overflow-hidden ${
+              className={`cursor-pointer rounded-xl overflow-hidden ${
                 darkMode ? 'bg-gray-800' : 'bg-white'
               } shadow-lg hover:shadow-xl transition-all duration-300 group`}
             >

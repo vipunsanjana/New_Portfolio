@@ -60,7 +60,7 @@ const About: React.FC<AboutProps> = ({ darkMode }) => {
           {/* Left Column - Story & Skills */}
           <div className="space-y-6">
             {/* Story Section */}
-            <div className={`p-6 rounded-2xl backdrop-blur-sm border ${
+            <div className={`cursor-pointer p-6 rounded-2xl backdrop-blur-sm border ${
               darkMode 
                 ? 'bg-gray-800/50 border-gray-700' 
                 : 'bg-white/70 border-gray-200'
@@ -108,7 +108,7 @@ const About: React.FC<AboutProps> = ({ darkMode }) => {
               </h4>
               <div className="space-y-4">
                 {achievements.map((achievement, index) => (
-                  <div key={index} className="flex items-start space-x-4 group hover:scale-105 transition-transform duration-300">
+                  <div key={index} className="cursor-pointer flex items-start space-x-4 group hover:scale-105 transition-transform duration-300">
                     <div className={`p-3 rounded-lg ${
                       darkMode ? 'bg-gray-700' : 'bg-gray-100'
                     } group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-purple-500 transition-all duration-300`}>
