@@ -7,7 +7,7 @@ interface AboutProps {
 
 const About: React.FC<AboutProps> = ({ darkMode }) => {
   const stats = [
-    { icon: Code, label: 'Projects Completed', value: '15+', color: 'from-blue-500 to-cyan-500' },
+    { icon: Code, label: 'Projects Completed', value: '100+', color: 'from-blue-500 to-cyan-500' },
     { icon: Users, label: 'Happy Clients', value: '5+', color: 'from-green-500 to-emerald-500' },
     { icon: Heart, label: 'Years of Experience', value: '3+', color: 'from-purple-500 to-pink-500' },
     { icon: Award, label: 'Technologies Mastered', value: '20+', color: 'from-orange-500 to-red-500' }
