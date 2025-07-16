@@ -99,7 +99,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
           <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
 
             {/* Top Section */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
 
               {/* Brand Section */}
               <div className="text-center md:text-left">
