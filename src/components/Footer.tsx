@@ -93,17 +93,17 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
       <div className="absolute -top-20 -left-20 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
       <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
 
-      <div className="relative z-10 py-8 sm:py-10">
+      <div className="relative z-10 py-4 sm:py-6">
         <div className="container mx-auto px-4">
           {/* Main Footer Content */}
           <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
 
             {/* Top Section */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
 
               {/* Brand Section */}
               <div className="text-center md:text-left">
-                <div className="flex items-center justify-center md:justify-start space-x-2 mb-4">
+                <div className="flex items-center justify-center md:justify-start space-x-2 mb-3">
                   <Code className={`w-8 h-8 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} />
                   <span className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                     Vipun Sanjana
@@ -117,7 +117,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
 
               {/* Quick Links */}
               <div className="text-center">
-                <h3 className={`text-lg font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                <h3 className={`text-lg font-semibold mb-3 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                   Quick Links
                 </h3>
                 <div className="flex flex-wrap justify-center gap-4">
@@ -161,10 +161,10 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
             </div>
 
             {/* Divider */}
-            <div className={`h-px ${darkMode ? 'bg-gradient-to-r from-transparent via-gray-700 to-transparent' : 'bg-gradient-to-r from-transparent via-gray-300 to-transparent'} mb-8`} />
+            <div className={`h-px ${darkMode ? 'bg-gradient-to-r from-transparent via-gray-700 to-transparent' : 'bg-gradient-to-r from-transparent via-gray-300 to-transparent'} mb-6`} />
 
             {/* Bottom Section */}
-            <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+            <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
 
               {/* Social Links */}
               <div className="flex items-center space-x-4">
@@ -186,7 +186,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
               </div>
 
               {/* Copyright */}
-              <div className="mt-8 text-center">
+              <div className="text-center">
                 <div className={`inline-flex items-center space-x-2 px-4 py-2 rounded-full text-xs font-medium ${darkMode
                   ? 'bg-gray-800/50 text-gray-400 border border-gray-700/50'
                   : 'bg-white/50 text-gray-600 border border-gray-200/50'
