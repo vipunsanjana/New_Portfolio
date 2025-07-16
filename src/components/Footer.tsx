@@ -193,9 +193,9 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
                   } backdrop-blur-sm`}>
                   <Zap className="w-3 h-3" />
                   <p className={`text-sm font-semibold flex items-center gap-2 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                    <span>© 2025 Made with</span>
+                    <span>© 2025 with</span>
                     <Heart className="w-4 h-4 text-red-500 fill-current animate-pulse" />
-                    <span>by Vipun Sanjana</span>
+                    <span>Vipun Sanjana</span>
                   </p>
                   <Star className="w-3 h-3 text-yellow-500" />
                 </div>
