@@ -108,7 +108,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
       {isMenuOpen && (
         <div className="md:hidden fixed top-20 left-0 right-0 z-40">
           <div
-            className={`mx-4 mt-2 py-4 rounded-lg border shadow-xl backdrop-blur-sm
+            className={`mt-2 py-4 rounded-lg border shadow-xl backdrop-blur-sm w-[90%] max-w-xs mx-auto
               ${darkMode
                 ? 'bg-gray-900/95 border-gray-700'
                 : 'bg-white/95 border-gray-200'}
