@@ -252,7 +252,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
           <p className={`text-sm ${
             darkMode ? 'text-gray-300' : 'text-gray-600'
           }`}>
-            Specialized in developing scalable backend modules using <strong>NestJS, Node js, Express, SpringBoot, Fast API, Flask, Ballerina and Go Lang</strong> framework, 
+            Specialized in developing scalable backend modules using <strong>NestJS, Node js, Express, SpringBoot, Fast API, Flask, Ballerina and Go Lang</strong>, 
             with extensive experience in microservices architecture, API development, and cloud deployment strategies.
           </p>
         </div>
