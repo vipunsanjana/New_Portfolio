@@ -28,11 +28,11 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
   const navItems = [
     { name: 'About', id: 'about', icon: <User className="w-5 h-5 mr-2" /> },
     { name: 'Education', id: 'education', icon: <Book className="w-5 h-5 mr-2" /> },
-    { name: 'Projects', id: 'projects', icon: <Laptop className="w-5 h-5 mr-2" /> },
-    { name: 'Contact', id: 'contact', icon: <Mail className="w-5 h-5 mr-2" /> },
     { name: 'Skills', id: 'skills', icon: <Award className="w-5 h-5 mr-2" /> },
+    { name: 'Projects', id: 'projects', icon: <Laptop className="w-5 h-5 mr-2" /> },
     { name: 'Experience', id: 'experience', icon: <Briefcase className="w-5 h-5 mr-2" /> },
-    { name: 'Certifications', id: 'certifications', icon: <BadgeCheck className="w-5 h-5 mr-2" /> }
+    { name: 'Certifications', id: 'certifications', icon: <BadgeCheck className="w-5 h-5 mr-2" /> },
+    { name: 'Contact', id: 'contact', icon: <Mail className="w-5 h-5 mr-2" /> }
   ];
 
   return (
