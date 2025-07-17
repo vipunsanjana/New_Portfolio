@@ -65,7 +65,7 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className={`cursor-pointer relative flex items-center mb-12 ${
+                className={`duration-300 hover:scale-95 cursor-pointer relative flex items-center mb-12 ${
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                 }`}
               >

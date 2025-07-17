@@ -17,7 +17,7 @@ const Education: React.FC<EducationProps> = ({ darkMode }) => {
     },
     {
       icon: GraduationCap,
-      title: "B.Sc(Software Engineering)Hon's",
+      title: "B.Sc (Software Engineering) Hon's",
       institution: "University of Kelaniya",
       year: "2022 - Present",
       stream: "Net Centric Applications domain, Mobile Computing Applications domain, Data Science and Engineering Applications domain"
@@ -44,10 +44,10 @@ const Education: React.FC<EducationProps> = ({ darkMode }) => {
           {educationData.map((edu, index) => (
             <div
               key={index}
-              className={`group  cursor-pointer p-6 sm:p-8 rounded-xl shadow-xl transform transition-all duration-300 
+              className={`group cursor-pointer p-6 sm:p-8 rounded-xl shadow-xl transform transition-all duration-300 
                 hover:scale-105 relative overflow-hidden
                 ${darkMode ? 'bg-gray-800 text-gray-300' : 'bg-gray-50 text-gray-800'}
-                hover:ring-2 hover:ring-blue-400 hover:ring-offset-2 hover:ring-offset-transparent
+                hover:ring-3 hover:ring-blue-400 hover:ring-offset-3 hover:ring-offset-transparent
               `}
             >
               {/* Glow Background Effect */}
