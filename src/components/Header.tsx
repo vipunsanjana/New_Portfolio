@@ -53,13 +53,13 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             </span>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation - Changed from md: to xl: for better tablet support */}
+          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navItems.map(item => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.id)}
-                className={`font-medium transition-colors hover:text-blue-600 text-sm lg:text-base
+                className={`font-medium transition-colors hover:text-blue-600 text-xs md:text-sm lg:text-base whitespace-nowrap
                   ${darkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700'}
                 `}
               >
