@@ -13,14 +13,14 @@ const Education: React.FC<EducationProps> = ({ darkMode }) => {
       institution: "Sripalee College, Horana",
       year: "2020",
       stream: "Physical Science",
-      result: "A - Combined Mathematics | B - Physics | B - Chemistry"
+      result: "A - Combined Mathematics | B - Physics | B - Chemistry, Z-Score - 1.6"
     },
     {
       icon: GraduationCap,
-      title: "Bachelor of Science in Software Engineering(Hon's)",
+      title: "B.Sc(Software Engineering)Hon's",
       institution: "University of Kelaniya",
       year: "2022 - Present",
-      stream: "Software Engineering"
+      stream: "Net Centric Applications domain, Mobile Computing Applications domain, Data Science and Engineering Applications domain"
     }
   ];
 
