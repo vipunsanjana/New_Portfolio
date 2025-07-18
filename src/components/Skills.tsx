@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+
 import {
   TerminalSquare,
   Layers,
@@ -38,7 +38,6 @@ interface SkillsProps {
 }
 
 const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
-  const [isVisible, setIsVisible] = useState(false);
 
   // Technology-specific icons mapping
   const techIcons: { [key: string]: any } = {
@@ -117,15 +116,6 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
     'Communication': MessageSquare,
     'Continuous Learning': BookOpen
   };
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => entry.isIntersecting && setIsVisible(true),
-      { threshold: 0.3 }
-    );
-    const element = document.getElementById('skills');
-    if (element) observer.observe(element);
-    return () => observer.disconnect();
-  }, []);
 
   const techDetails = [
     { icon: TerminalSquare, title: 'Languages', content: 'Python, JavaScript/TypeScript, Java, SQL, Go, Ballerina, KQL, Dart, C, C++, PHP' },
@@ -146,16 +136,13 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
   return (
     <section id="skills" className={`py-20 ${darkMode ? 'bg-gray-900' : 'bg-gradient-to-b from-white via-blue-50 to-white'}`}>
       <div className="container mx-auto px-6">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className={`text-4xl md:text-5xl font-extrabold tracking-tight mb-4 ${
-            darkMode ? 'text-white' : 'text-gray-900'
-          }`}>
+
+        <div className="text-center mb-16">
+          <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
             Skills & Technologies
           </h2>
-          <div className="w-24 h-1 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-          <p className={`text-lg md:text-xl max-w-2xl mx-auto ${
-            darkMode ? 'text-gray-400' : 'text-gray-600'
-          }`}>
+          <div className={`w-24 h-1 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full`}></div>
+          <p className={`text-lg ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
             Tools and tech I work with to bring ideas to life.
           </p>
         </div>
