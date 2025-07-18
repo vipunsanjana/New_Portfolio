@@ -151,7 +151,7 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
           {techDetails.map((tech, index) => (
             <div
               key={index}
-              className={`group relative overflow-hidden rounded-2xl p-6 transition-all duration-300 hover:scale-105 hover:-translate-y-2 ${
+              className={`cursor-pointer group relative overflow-hidden rounded-2xl p-6 transition-all duration-300 hover:scale-105 hover:-translate-y-2 ${
                 darkMode
                   ? 'bg-gray-800/60 backdrop-blur-md border border-gray-700 hover:border-blue-500'
                   : 'bg-white/80 backdrop-blur-md border border-gray-200 hover:border-blue-400 shadow-lg hover:shadow-xl'
