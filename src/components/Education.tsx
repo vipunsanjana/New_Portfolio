@@ -13,7 +13,7 @@ const Education: React.FC<EducationProps> = ({ darkMode }) => {
       institution: "Sripalee College, Horana",
       year: "2020",
       stream: "Physical Science",
-      result: "A - Combined Mathematics | B - Physics | B - Chemistry, Z-Score - 1.6"
+      result: "A - Combined Maths | B - Physics | B - Chemistry, Z-Score - 1.6"
     },
     {
       icon: GraduationCap,
