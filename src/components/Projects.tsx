@@ -21,14 +21,23 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
       title: 'University Z-Score Analysis System',
       description: 'Advanced analytics platform analyzing island-wide Z-score data to recommend suitable university courses. Features comprehensive data processing, predictive analytics, and responsive course recommendation engine.',
       image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Python FastAPI', 'Angular NX', 'AWS', 'CI/CD', 'Shell Scripting', 'Google Sheet API'],
+      technologies: ['Python FastAPI', 'Angular NX', 'AWS', 'CI/CD', 'Shell Scripting', 'Google Sheet API', 'Docker', 'Nginx', 'GitHub Actions', 'Reverse Proxy', 'Load Balancing'],
       githubUrl: [
-        'https://github.com/vipunsanjana/university-project-mobile-computing-backend.git',
-        'https://github.com/vipunsanjana/university-project-mobile-computing-frontend.git'
+        'https://github.com/vipunsanjana/university-course-app-fastapi-angularnx-ec2-nginx-ci-cd.git'
       ],
       date: '2025',
       category: 'Mobile Computing',
-      deployment: 'AWS with CI/CD'
+      deployment: 'AWS with CI/CD EC2 Instance'
+    },
+    {
+      title: 'MERN App Deployment - AWS EC2 with CI/CD',
+      description: 'Production-ready MERN application deployment on AWS EC2 featuring Docker containerization, NGINX reverse proxy and load balancer, SSL security via Let\'s Encrypt, and automated CI/CD pipeline using GitHub Actions with secure secret management.',
+      image: 'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['MERN Stack', 'Docker', 'NGINX', 'AWS EC2', 'GitHub Actions', 'Load Balancer', 'Reverse Proxy', 'AWS Secrets Manager', 'VPC'],
+      githubUrl: 'https://github.com/vipunsanjana/mern-aws-docker-nginx-cicd-githubaction-reverseproxy-loadbalancer-ec2-vpc',
+      date: '2025',
+      category: 'DevOps',
+      deployment: 'AWS CI/CD EC2 Production'
     },
     {
       title: 'MediConnect - Medical Web Application',
@@ -39,6 +48,26 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
       date: '2024',
       category: 'Full Stack',
       deployment: 'Production Live'
+    },
+    {
+      title: 'FastAPI DevOps Pipeline - Jenkins & ArgoCD (Pending)',
+      description: 'Production-grade FastAPI CRUD application with comprehensive DevOps pipeline featuring Jenkins CI/CD, SonarQube code analysis, Kubernetes deployment via ArgoCD, and AWS EC2 hosting with Minikube cluster.',
+      image: 'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['FastAPI', 'Jenkins', 'ArgoCD', 'SonarQube', 'Kubernetes', 'Docker', 'AWS EC2', 'Minikube', 'Pydantic', 'Swagger UI'],
+      githubUrl: 'https://github.com/vipunsanjana/Fastapi-K8s-Jenkins-AgroCD-EC2-SonarQube-Docker',
+      date: '2025',
+      category: 'DevOps',
+      deployment: 'AWS EC2 with K8s'
+    },
+    {
+      title: 'Memory Match Game - Kubernetes Deployment',
+      description: 'Cloud-native memory match game deployed on AWS EKS with advanced Kubernetes orchestration. Features auto-scaling, load balancing, and container management using Fargate serverless compute with Helm charts for deployment automation.',
+      image: 'https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['AWS EKS', 'Kubernetes', 'Ingress', 'AWS ALB', 'Fargate', 'Helm', 'Container Orchestration', 'Docker', 'GitHub Actions', 'Docker Hub', 'CI/CD'],
+      githubUrl: 'https://github.com/vipunsanjana/Memory-Match-EKS',
+      date: '2024',
+      category: 'DevOps',
+      deployment: 'AWS EKS Cluster'
     },
     {
       title: 'Hospital Management System Backend',

@@ -91,9 +91,25 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
               </div>
               <div>
                 <h4 className={`font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}>Location</h4>
-                <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Colombo, Sri Lanka</p>
+                <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Bandaragama, Sri Lanka</p>
               </div>
             </div>
+            
+            {/* Google Map */}
+            <div className={`mt-6 rounded-lg overflow-hidden ${darkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63371.84234567891!2d79.99123456789012!3d6.789012345678901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2593cf65a1e9d%3A0x1e2f3a4b5c6d7e8f!2sBandaragama%2C%20Sri%20Lanka!5e0!3m2!1sen!2slk!4v1234567890123!5m2!1sen!2slk"
+                width="100%"
+                height="250"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Bandaragama, Sri Lanka Location"
+                className="w-full"
+              />
+            </div>
+            
             <div className="flex space-x-4 pt-4">
               {[
                 { icon: Github, href: 'https://github.com/vipunsanjana' },

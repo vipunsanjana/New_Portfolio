@@ -1,4 +1,3 @@
-
 import {
   TerminalSquare,
   Layers,
@@ -75,6 +74,7 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
     'Terraform': Cloud,
     'Kubernetes': Container,
     'Argo CD learning': GitMerge,
+    'Nginx': Server, // Added Nginx
     
     // Cloud
     'AWS': Cloud,
@@ -118,14 +118,14 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
   };
 
   const techDetails = [
-    { icon: TerminalSquare, title: 'Languages', content: 'Python, JavaScript/TypeScript, Java, SQL, Go, Ballerina, KQL, Dart, C, C++, PHP' },
+    { icon: TerminalSquare, title: 'Languages', content: 'Python, JavaScript/TypeScript, Java, SQL, Go, Ballerina, KQL, Dart, C, C++, PHP, Rust Learning' },
     { icon: Layers, title: 'Frameworks', content: 'NestJS, FastAPI, Flask, Flutter, NodeJS, Angular, Spring Boot, React, React Native, Express' },
-    { icon: Settings, title: 'DevOps Tools & Platforms', content: 'Git, Docker, GitHub Actions, Jenkins, Ansible, Terraform, Kubernetes, Argo CD learning' },
+    { icon: Settings, title: 'DevOps Tools & Platforms', content: 'Git, Docker, GitHub Actions, Jenkins, Ansible, Terraform, Kubernetes, Argo CD learning, Nginx' }, // Added Nginx
     { icon: Cloud, title: 'Cloud & Infrastructure', content: 'AWS, Oracle and Azure Learning' },
     { icon: Wrench, title: 'Scripting & Automation', content: 'Shell Scripting, Cron Jobs, Ansible Automation, Python Automation' },
     { icon: Database, title: 'Databases', content: 'MySQL, MongoDB, Firebase, MariaDB' },
     { icon: MonitorCheck, title: 'Tools & IDEs', content: 'Postman, Jira, LaTeX, VS Code, IntelliJ IDEA, Android Studio, Arduino IDE' },
-    { icon: GitBranch, title: 'Platforms', content: 'Windows, Linux (Ubuntu, Kali), Arduino, ESP8266, Raspberry Pi Learning' },
+    { icon: GitBranch, title: 'Platforms', content: 'Windows, Linux, Arduino, ESP8266, Raspberry Pi Learning' },
     { icon: Brain, title: 'Soft Skills', content: 'Problem Solving, Critical Thinking, Team Player, Communication, Continuous Learning' }
   ];
 
