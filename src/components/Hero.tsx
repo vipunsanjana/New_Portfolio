@@ -58,7 +58,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
   );
 
   return (
-    <section className={`min-h-screen flex items-center justify-center relative overflow-hidden ${darkMode ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900' : 'bg-gradient-to-br from-blue-50 via-white to-indigo-50'}`}>
+    <section id='hero' className={`min-h-screen flex items-center justify-center relative overflow-hidden ${darkMode ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900' : 'bg-gradient-to-br from-blue-50 via-white to-indigo-50'}`}>
       {/* Background Grid */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
 

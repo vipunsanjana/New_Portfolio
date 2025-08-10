@@ -46,13 +46,17 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Brand */}
-          <div className="flex items-center space-x-2">
+          <div
+            onClick={() => scrollToSection('hero')}
+            className="flex items-center space-x-2 cursor-pointer"
+          >
             <Code className={`w-8 h-8 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} />
-            <span className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+            <span
+              className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}
+            >
               Vipun Sanjana
             </span>
           </div>
-
           {/* Desktop Navigation - Changed from md: to xl: for better tablet support */}
           <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navItems.map(item => (
