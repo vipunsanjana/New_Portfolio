@@ -74,11 +74,11 @@ const Education: React.FC<EducationProps> = ({ darkMode }) => {
               darkMode ? 'text-white' : 'text-gray-900'
             }`}
           >
-            Education & Certifications
+            Education
           </h2>
           <div className="w-24 h-1 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
           <p className={`text-lg ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-            My academic journey and professional certifications
+            My academic journey and learning experiences
           </p>
         </div>
 
