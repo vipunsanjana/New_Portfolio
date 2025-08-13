@@ -83,7 +83,7 @@ const Education: React.FC<EducationProps> = ({ darkMode }) => {
         </div>
 
         {/* Education Grid */}
-        <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+        <div className="cursor-pointer grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
           {educationData.map((edu, index) => (
             <div
               key={index}
