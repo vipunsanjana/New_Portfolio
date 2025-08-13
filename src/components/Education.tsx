@@ -18,7 +18,7 @@ const Education: React.FC<EducationProps> = ({ darkMode }) => {
     {
       icon: GraduationCap,
       title: "B.Sc (Software Engineering) Hon's",
-      institution: "University of Kelaniya",
+      institution: "University of Kelaniya - Faculty of Science",
       year: "2022 - Present",
       stream: "Net Centric Applications domain, Mobile Computing Applications domain, Data Science and Engineering Applications domain"
     },
