@@ -16,9 +16,9 @@ const Certifications: React.FC<CertificationsProps> = ({ darkMode }) => {
       verifyUrl: 'simpli-web.app.link/e/tZHLLSCEWUb',
     },
     {
-      title: 'Oracle MySQL HeatWave Certification',
+      title: 'Oracle MySQL HeatWave Certification (followed)',
       issuer: 'Oracle',
-      date: 'Pending',
+      date: 'Jul 2025',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg',
       skills: ['MySQL', 'HeatWave', 'Cloud Database'],
       verifyUrl: '#',
@@ -39,6 +39,25 @@ const Certifications: React.FC<CertificationsProps> = ({ darkMode }) => {
       logo: 'https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg',
       skills: ['Cloud Infrastructure', 'AWS', 'OCI'],
       verifyUrl: 'https://mylearn.oracle.com/ou/learning-path/oci-for-aws-architects-2025/145594',
+    },
+    {
+      title: 'DevOps Engineering Certification (Pending)',
+      issuer: 'Learnfi',
+      date: 'Aug 2025 - Present',
+      logo: '/og-image.jpg', 
+      skills: [
+        'AWS Cloud',
+        'Amazon EC2',
+        'Amazon ECR',
+        'Amazon ECS',
+        'Nginx',
+        'GitHub Actions',
+        'Docker',
+        'Grafana',
+        'Amazon CloudWatch'
+      ],
+      verifyUrl: '',
+      status: 'Pending'
     },
     {
       title: 'AWS Educate Getting Started with Serverless',
@@ -179,17 +198,15 @@ const Certifications: React.FC<CertificationsProps> = ({ darkMode }) => {
         {/* Licenses & Certifications Section */}
         <div className="text-center mb-16">
           <h2
-            className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-6 px-4 ${
-              darkMode ? 'text-white' : 'text-gray-900'
-            }`}
+            className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-6 px-4 ${darkMode ? 'text-white' : 'text-gray-900'
+              }`}
           >
             Licenses & Certifications
           </h2>
           <div className={`w-24 h-1 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full`}></div>
           <p
-            className={`text-lg sm:text-xl px-4 ${
-              darkMode ? 'text-gray-400' : 'text-gray-600'
-            }`}
+            className={`text-lg sm:text-xl px-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'
+              }`}
           >
             Professional certifications and industry recognition
           </p>
@@ -199,11 +216,9 @@ const Certifications: React.FC<CertificationsProps> = ({ darkMode }) => {
           {licenses.map((license, index) => (
             <div
               key={index}
-              className={`rounded-xl overflow-hidden ${
-                darkMode ? 'bg-gray-800' : 'bg-white'
-              } shadow-lg border ${
-                darkMode ? 'border-gray-700' : 'border-gray-100'
-              } transition-transform duration-300 hover:shadow-xl hover:scale-105 cursor-pointer`}
+              className={`rounded-xl overflow-hidden ${darkMode ? 'bg-gray-800' : 'bg-white'
+                } shadow-lg border ${darkMode ? 'border-gray-700' : 'border-gray-100'
+                } transition-transform duration-300 hover:shadow-xl hover:scale-105 cursor-pointer`}
             >
               <div className="p-6 flex flex-col items-center text-center">
                 <img
@@ -212,23 +227,20 @@ const Certifications: React.FC<CertificationsProps> = ({ darkMode }) => {
                   className="h-12 mb-4 object-contain"
                 />
                 <h3
-                  className={`font-bold text-lg mb-1 ${
-                    darkMode ? 'text-white' : 'text-gray-900'
-                  }`}
+                  className={`font-bold text-lg mb-1 ${darkMode ? 'text-white' : 'text-gray-900'
+                    }`}
                 >
                   {license.title}
                 </h3>
                 <p
-                  className={`text-xs sm:text-sm font-medium mb-1 ${
-                    darkMode ? 'text-blue-400' : 'text-blue-600'
-                  }`}
+                  className={`text-xs sm:text-sm font-medium mb-1 ${darkMode ? 'text-blue-400' : 'text-blue-600'
+                    }`}
                 >
                   {license.issuer}
                 </p>
                 <p
-                  className={`text-xs mb-3 ${
-                    darkMode ? 'text-gray-400' : 'text-gray-600'
-                  }`}
+                  className={`text-xs mb-3 ${darkMode ? 'text-gray-400' : 'text-gray-600'
+                    }`}
                 >
                   Issued {license.date}
                 </p>
@@ -236,54 +248,48 @@ const Certifications: React.FC<CertificationsProps> = ({ darkMode }) => {
                   {license.skills.map((skill, i) => (
                     <span
                       key={i}
-                      className={`px-2 py-1 rounded text-xs font-medium ${
-                        darkMode
+                      className={`px-2 py-1 rounded text-xs font-medium ${darkMode
                           ? 'bg-gray-700 text-gray-300'
                           : 'bg-gray-100 text-gray-700'
-                      } transition-colors duration-200 hover:${
-                        darkMode ? 'bg-gray-600 text-white' : 'bg-gray-300'
-                      }`}
+                        } transition-colors duration-200 hover:${darkMode ? 'bg-gray-600 text-white' : 'bg-gray-300'
+                        }`}
                     >
                       {skill}
                     </span>
                   ))}
                 </div>
-       {license.verifyUrl && license.verifyUrl !== '#' && (
-                <a
-                  href={license.verifyUrl}
-                  className={`inline-flex items-center space-x-2 px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors w-full justify-center ${
-                    darkMode
-                      ? 'bg-blue-600 text-white hover:bg-blue-700'
-                      : 'bg-blue-600 text-white hover:bg-blue-700'
-                  }`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  <span>Verify</span>
-                </a>
-              )}
+                {license.verifyUrl && license.verifyUrl !== '#' && (
+                  <a
+                    href={license.verifyUrl}
+                    className={`inline-flex items-center space-x-2 px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors w-full justify-center ${darkMode
+                        ? 'bg-blue-600 text-white hover:bg-blue-700'
+                        : 'bg-blue-600 text-white hover:bg-blue-700'
+                      }`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    <span>Verify</span>
+                  </a>
+                )}
               </div>
             </div>
           ))}
         </div>
 
         <div
-          className={`mt-16 text-center p-6 sm:p-8 rounded-xl mx-4 ${
-            darkMode ? 'bg-gray-800' : 'bg-gray-50'
-          }`}
+          className={`mt-16 text-center p-6 sm:p-8 rounded-xl mx-4 ${darkMode ? 'bg-gray-800' : 'bg-gray-50'
+            }`}
         >
           <h3
-            className={`text-xl sm:text-2xl font-bold mb-4 ${
-              darkMode ? 'text-white' : 'text-gray-900'
-            }`}
+            className={`text-xl sm:text-2xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'
+              }`}
           >
             Continuous Learning
           </h3>
           <p
-            className={`text-base sm:text-lg mb-6 ${
-              darkMode ? 'text-gray-300' : 'text-gray-600'
-            }`}
+            className={`text-base sm:text-lg mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-600'
+              }`}
           >
             I'm committed to staying current with the latest technologies and
             industry best practices. Currently pursuing additional
@@ -298,11 +304,10 @@ const Certifications: React.FC<CertificationsProps> = ({ darkMode }) => {
             ].map((course, index) => (
               <span
                 key={index}
-                className={`cursor-pointer px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium ${
-                  darkMode
+                className={`cursor-pointer px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium ${darkMode
                     ? 'bg-gray-700 text-blue-400 border border-gray-600'
                     : 'bg-blue-100 text-blue-800 border border-blue-200'
-                }`}
+                  }`}
               >
                 📚 {course}
               </span>
