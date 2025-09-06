@@ -127,24 +127,86 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
       date: '2024',
       category: 'Mobile',
       deployment: 'Client Production'
+    },
+    {
+      title: 'RAG-Based Knowledge Management System',
+      description: 'End-to-end Retrieval-Augmented Generation (RAG) Knowledge Management System leveraging OpenAI for generative AI, Pinecone as a vector database, and Flask for deployment.',
+      image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800', // AI Knowledge base image
+      technologies: ['Flask', 'OpenAI', 'Pinecone', 'TypeScript', 'Docker'],
+      githubUrl: 'https://github.com/vipunsanjana/RAG-Based-Knowledge-Management-System-LLMs-with-Flask-OpenAI-Pinecone',
+      date: '2025',
+      category: 'AI/ML',
+      deployment: 'Flask + Pinecone'
+    },
+    {
+      title: 'Multi-Agent AI Pipeline - Automated Research & Report Generation',
+      description: 'A multi-agent AI research pipeline built with CrewAI, LangChain, and Groq. Orchestrates specialized AI agents (Researcher, Writer, Editor, Presenter) for automated research and report generation.',
+      image: 'https://images.pexels.com/photos/3184635/pexels-photo-3184635.jpeg?auto=compress&cs=tinysrgb&w=800', // AI teamwork image
+      technologies: ['Python', 'CrewAI', 'LangChain', 'Groq', 'SerperDevTool'],
+      githubUrl: 'https://github.com/vipunsanjana/Multi-agent-AIPipeline-AutomatedResearch-reportGeneration-CrewAI-LangChain-Groq',
+      date: '2025',
+      category: 'AI/ML',
+      deployment: 'Pipeline Automation'
+    },
+    {
+      title: 'Medical Assistant Chatbot (RAG + LLMs)',
+      description: 'End-to-end medical chatbot built with Generative AI, combining LLMs, LangChain, Pinecone for vector search, and Flask for deployment with AWS CI/CD.',
+      image: 'https://images.pexels.com/photos/6129681/pexels-photo-6129681.jpeg?auto=compress&cs=tinysrgb&w=800', // medical AI chatbot
+      technologies: ['LLMs', 'LangChain', 'Flask', 'AWS', 'Pinecone', 'CI/CD'],
+      githubUrl: 'https://github.com/vipunsanjana/Medical-Assistant-Chatbot-LLM-Langchain-Flask-RAG-AWS-CI-CD-Pinecone-GenAI',
+      date: '2025',
+      category: 'AI/ML',
+      deployment: 'AWS CI/CD'
+    },
+    {
+      title: 'Spring Microservices Complete Blueprint',
+      description: 'A complete end-to-end microservices architecture built with Spring Boot and Spring Cloud. Includes service discovery (Eureka), API Gateway, Keycloak security, inter-service communication, and circuit breakers.',
+      image: 'https://images.pexels.com/photos/1181345/pexels-photo-1181345.jpeg?auto=compress&cs=tinysrgb&w=800', // microservices image
+      technologies: ['Java', 'Spring Boot', 'Spring Cloud', 'Eureka', 'Keycloak'],
+      githubUrl: 'https://github.com/vipunsanjana/Spring-Microservices-Complete-Blueprint',
+      date: '2024',
+      category: 'Backend',
+      deployment: 'Microservices Architecture'
+    },
+    {
+      title: 'MLOps Diabetes Prediction API',
+      description: 'MLOps-ready Diabetes Prediction API using FastAPI, Docker, and Kubernetes. Includes automated CI/CD with GitHub Actions, versioned Docker images, and secure secret management.',
+      image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=800', // ML prediction image
+      technologies: ['FastAPI', 'Random Forest', 'Docker', 'Kubernetes', 'GitHub Actions'],
+      githubUrl: 'https://github.com/vipunsanjana/MLOPS-Diabetes-Prediction-FastAPI-RandomForest',
+      date: '2025',
+      category: 'AI/ML',
+      deployment: 'Kubernetes Cluster'
+    },
+    {
+      title: 'Classical Machine Learning Models Suite',
+      description: 'Implementations of core ML algorithms including SVM, Decision Trees, KNN, and Ensemble Methods with preprocessing, tuning, and evaluation on real datasets.',
+      image: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['Python', 'Scikit-learn', 'XGBoost', 'mlxtend', 'Jupyter Notebook'],
+      githubUrl: [
+        'https://github.com/vipunsanjana/MLO-SVM-Bank-Marketing-Classifier-ML',
+        'https://github.com/vipunsanjana/MLO-Ensemble-Methods-ML',
+        'https://github.com/vipunsanjana/MLO-Decision-Tree-Classification-Regression',
+        'https://github.com/vipunsanjana/MLO-KNN-Classification-Regression'
+      ],
+      date: '2025',
+      category: 'AI/ML',
+      deployment: 'Jupyter Notebook'
     }
   ];
 
   return (
-    <section id="projects" className={`py-20 ${
-      darkMode ? 'bg-gray-900' : 'bg-white'
-    }`}>
+    <section id="projects" className={`py-20 ${darkMode ? 'bg-gray-900' : 'bg-white'
+      }`}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-6 px-4 ${
-            darkMode ? 'text-white' : 'text-gray-900'
-          }`}>
+          <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-6 px-4 ${darkMode ? 'text-white' : 'text-gray-900'
+            }`}>
             Featured Projects
           </h2>
           <div className={`w-24 h-1 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full`}></div>
-          <p className={`text-lg sm:text-xl px-4 ${
-            darkMode ? 'text-gray-400' : 'text-gray-600'
-          }`}>
+          <p className={`text-lg sm:text-xl px-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'
+            }`}>
             Real-world solutions and research implementations
           </p>
         </div>
@@ -153,9 +215,8 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`cursor-pointer rounded-xl overflow-hidden ${
-                darkMode ? 'bg-gray-800' : 'bg-white'
-              } shadow-lg hover:shadow-xl transition-all duration-300 group`}
+              className={`cursor-pointer rounded-xl overflow-hidden ${darkMode ? 'bg-gray-800' : 'bg-white'
+                } shadow-lg hover:shadow-xl transition-all duration-300 group`}
             >
               <div className="relative overflow-hidden">
                 <img
@@ -164,20 +225,18 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute top-4 right-4 flex space-x-2">
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    darkMode 
-                      ? 'bg-gray-900/80 text-gray-200' 
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${darkMode
+                      ? 'bg-gray-900/80 text-gray-200'
                       : 'bg-white/80 text-gray-800'
-                  }`}>
+                    }`}>
                     {project.category}
                   </span>
                 </div>
                 <div className="absolute bottom-4 left-4">
-                  <span className={`px-2 py-1 rounded text-xs font-medium ${
-                    darkMode 
-                      ? 'bg-blue-600/80 text-white' 
+                  <span className={`px-2 py-1 rounded text-xs font-medium ${darkMode
+                      ? 'bg-blue-600/80 text-white'
                       : 'bg-blue-600/80 text-white'
-                  }`}>
+                    }`}>
                     {project.deployment}
                   </span>
                 </div>
@@ -185,9 +244,8 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
 
               <div className="p-4 sm:p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className={`text-lg sm:text-xl font-bold ${
-                    darkMode ? 'text-white' : 'text-gray-900'
-                  }`}>
+                  <h3 className={`text-lg sm:text-xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'
+                    }`}>
                     {project.title}
                   </h3>
                   <div className="flex items-center space-x-1 text-sm text-gray-500">
@@ -196,9 +254,8 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
                   </div>
                 </div>
 
-                <p className={`text-xs sm:text-sm mb-4 leading-relaxed ${
-                  darkMode ? 'text-gray-300' : 'text-gray-600'
-                }`}>
+                <p className={`text-xs sm:text-sm mb-4 leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'
+                  }`}>
                   {project.description}
                 </p>
 
@@ -206,11 +263,10 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
                   {project.technologies && project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className={`px-2 py-1 rounded text-xs font-medium ${
-                        darkMode 
-                          ? 'bg-gray-700 text-gray-300' 
+                      className={`px-2 py-1 rounded text-xs font-medium ${darkMode
+                          ? 'bg-gray-700 text-gray-300'
                           : 'bg-gray-100 text-gray-700'
-                      }`}
+                        }`}
                     >
                       {tech}
                     </span>
@@ -224,11 +280,10 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
                         <a
                           key={idx}
                           href={url}
-                          className={`flex items-center justify-center space-x-2 px-6 py-2 rounded-lg text-sm font-medium transition-colors w-full ${
-                            darkMode 
-                              ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' 
+                          className={`flex items-center justify-center space-x-2 px-6 py-2 rounded-lg text-sm font-medium transition-colors w-full ${darkMode
+                              ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                          }`}
+                            }`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -240,24 +295,23 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
                   ) : (
                     <a
                       href={typeof project.githubUrl === 'string' ? project.githubUrl : '#'}
-                      className={`flex items-center justify-center space-x-2 px-6 py-2 rounded-lg text-sm font-medium transition-colors w-full ${
-                        project.githubUrl === 'Private Repository' || project.githubUrl === '#'
-                          ? darkMode 
-                            ? 'bg-gray-700 text-gray-400 cursor-not-allowed' 
+                      className={`flex items-center justify-center space-x-2 px-6 py-2 rounded-lg text-sm font-medium transition-colors w-full ${project.githubUrl === 'Private Repository' || project.githubUrl === '#'
+                          ? darkMode
+                            ? 'bg-gray-700 text-gray-400 cursor-not-allowed'
                             : 'bg-gray-200 text-gray-500 cursor-not-allowed'
-                          : darkMode 
-                            ? 'bg-gray-700 text-gray-300 hover:bg-gray-600' 
+                          : darkMode
+                            ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                      }`}
-                      {...(project.githubUrl === 'Private Repository' || project.githubUrl === '#' 
-                        ? { onClick: (e) => e.preventDefault() } 
+                        }`}
+                      {...(project.githubUrl === 'Private Repository' || project.githubUrl === '#'
+                        ? { onClick: (e) => e.preventDefault() }
                         : { target: '_blank', rel: 'noopener noreferrer' }
                       )}
                     >
                       <Github className="w-4 h-4" />
                       <span>
-                        {project.githubUrl === 'Private Repository' 
-                          ? 'Private Repository'  
+                        {project.githubUrl === 'Private Repository'
+                          ? 'Private Repository'
                           : 'View Code'
                         }
                       </span>
@@ -270,18 +324,15 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         </div>
 
         {/* Additional Info Section */}
-        <div className={`mt-16 text-center p-8 rounded-xl ${
-          darkMode ? 'bg-gray-800' : 'bg-gray-50'
-        }`}>
-          <h3 className={`text-xl font-bold mb-4 ${
-            darkMode ? 'text-white' : 'text-gray-900'
+        <div className={`mt-16 text-center p-8 rounded-xl ${darkMode ? 'bg-gray-800' : 'bg-gray-50'
           }`}>
+          <h3 className={`text-xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'
+            }`}>
             Backend Development Expertise
           </h3>
-          <p className={`text-sm ${
-            darkMode ? 'text-gray-300' : 'text-gray-600'
-          }`}>
-            Specialized in developing scalable backend modules using <strong>NestJS, Node js, Express, SpringBoot, Fast API, Flask, Ballerina and Go Lang</strong>, 
+          <p className={`text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'
+            }`}>
+            Specialized in developing scalable backend modules using <strong>NestJS, Node js, Express, SpringBoot, Fast API, Flask, Ballerina and Go Lang</strong>,
             with extensive experience in microservices architecture, API development, and cloud deployment strategies.
           </p>
         </div>
