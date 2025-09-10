@@ -162,14 +162,14 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
       title: 'Spring Microservices Complete Blueprint',
       description: 'A complete end-to-end microservices architecture built with Spring Boot and Spring Cloud. Includes service discovery (Eureka), API Gateway, Keycloak security, inter-service communication, and circuit breakers.',
       image: 'https://images.pexels.com/photos/1181345/pexels-photo-1181345.jpeg?auto=compress&cs=tinysrgb&w=800', // microservices image
-      technologies: ['Java', 'Spring Boot', 'Spring Cloud', 'Eureka', 'Keycloak'],
+      technologies: ['Java', 'Spring Boot', 'Spring Cloud', 'Eureka', 'Keycloak', 'Docker', 'Kafka', 'MySQL', 'MongoDB', 'Circuit Breaker', 'Grafana', 'Prometheus'],
       githubUrl: 'https://github.com/vipunsanjana/Spring-Microservices-Complete-Blueprint',
       date: '2024',
       category: 'Backend',
       deployment: 'Microservices Architecture'
     },
     {
-      title: 'MLOps Diabetes Prediction API',
+      title: 'MLOps Diabetes Prediction API with FastAPI & Kubernetes',
       description: 'MLOps-ready Diabetes Prediction API using FastAPI, Docker, and Kubernetes. Includes automated CI/CD with GitHub Actions, versioned Docker images, and secure secret management.',
       image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=800', // ML prediction image
       technologies: ['FastAPI', 'Random Forest', 'Docker', 'Kubernetes', 'GitHub Actions'],
@@ -179,20 +179,16 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
       deployment: 'Kubernetes Cluster'
     },
     {
-      title: 'Classical Machine Learning Models Suite',
-      description: 'Implementations of core ML algorithms including SVM, Decision Trees, KNN, and Ensemble Methods with preprocessing, tuning, and evaluation on real datasets.',
-      image: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Python', 'Scikit-learn', 'XGBoost', 'mlxtend', 'Jupyter Notebook'],
-      githubUrl: [
-        'https://github.com/vipunsanjana/MLO-SVM-Bank-Marketing-Classifier-ML',
-        'https://github.com/vipunsanjana/MLO-Ensemble-Methods-ML',
-        'https://github.com/vipunsanjana/MLO-Decision-Tree-Classification-Regression',
-        'https://github.com/vipunsanjana/MLO-KNN-Classification-Regression'
-      ],
+      title: 'AutoSecOps: Automated Vulnerability Detection in DevSecOps (Pending)',
+      description: 'Ongoing final year research project focused on automating vulnerability detection in DevSecOps pipelines. Integrates ML models for vulnerability prediction, security automation, and visualization dashboards.',
+      image: 'https://images.pexels.com/photos/5380643/pexels-photo-5380643.jpeg?auto=compress&cs=tinysrgb&w=800', // Cybersecurity-themed image
+      technologies: ['Cybersecurity', 'Artificial Intelligence (AI)', 'DevSecOps', 'Machine Learning'],
+      githubUrl: 'Private Repository',
       date: '2025',
-      category: 'AI/ML',
-      deployment: 'Jupyter Notebook'
+      category: 'Cybersecurity + AI',
+      deployment: 'Security Automation Research'
     }
+
   ];
 
   return (

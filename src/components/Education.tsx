@@ -7,6 +7,13 @@ interface EducationProps {
 
 const Education: React.FC<EducationProps> = ({ darkMode }) => {
   const educationData = [
+      {
+      icon: GraduationCap,
+      title: "B.Sc (Software Engineering) Hon's",
+      institution: "University of Kelaniya - Faculty of Science",
+      year: "2022 - Present",
+      stream: "Net Centric Applications domain, Mobile Computing Applications domain, Data Science and Engineering Applications domain"
+    },
     {
       icon: School,
       title: "G.C.E. Advanced Level",
@@ -14,13 +21,6 @@ const Education: React.FC<EducationProps> = ({ darkMode }) => {
       year: "2020",
       stream: "Physical Science",
       result: "A - Combined Maths | B - Physics | B - Chemistry, Z-Score - 1.6"
-    },
-    {
-      icon: GraduationCap,
-      title: "B.Sc (Software Engineering) Hon's",
-      institution: "University of Kelaniya - Faculty of Science",
-      year: "2022 - Present",
-      stream: "Net Centric Applications domain, Mobile Computing Applications domain, Data Science and Engineering Applications domain"
     },
     {
       icon: BadgeCheck,

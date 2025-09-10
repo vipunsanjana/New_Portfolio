@@ -29,7 +29,13 @@ import {
   Users,
   MessageSquare,
   Target,
-  BookOpen
+  BookOpen,
+  Network,
+  ShieldCheck,
+  Binary,
+  BarChart3,
+  Bot,
+  WorkflowIcon,
 } from 'lucide-react';
 
 interface SkillsProps {
@@ -37,112 +43,203 @@ interface SkillsProps {
 }
 
 const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
-
   // Technology-specific icons mapping
   const techIcons: { [key: string]: any } = {
     // Languages
-    'Python': Code2,
+    Python: Code2,
     'JavaScript/TypeScript': FileCode,
-    'Java': Cpu,
-    'SQL': Database,
-    'Go': Zap,
-    'Ballerina': Globe,
-    'KQL': Terminal,
-    'Dart': Smartphone,
-    'C': Code2,
+    Java: Cpu,
+    SQL: Database,
+    Go: Zap,
+    Ballerina: Globe,
+    KQL: Terminal,
+    Dart: Smartphone,
+    C: Code2,
     'C++': Code2,
-    'PHP': Server,
-    
-    // Frameworks
-    'NestJS': Server,
-    'FastAPI': Zap,
-    'Flask': Code2,
-    'Flutter': Smartphone,
-    'NodeJS': Server,
-    'Angular': Globe,
+    PHP: Server,
+
+    // Frameworks & Libraries
+    NestJS: Server,
+    FastAPI: Zap,
+    Flask: Code2,
+    Flutter: Smartphone,
+    'Node.js': Server,
+    Angular: Globe,
     'Spring Boot': Cpu,
-    'React': Globe,
+    React: Globe,
     'React Native': Smartphone,
-    'Express': Server,
-    
-    // DevOps
-    'Git': GitMerge,
-    'Docker': Container,
-    'GitHub Actions': Workflow,
-    'Jenkins': Settings,
-    'Ansible': CloudCog,
-    'Terraform': Cloud,
-    'Kubernetes': Container,
-    'Argo CD learning': GitMerge,
-    'Nginx': Server, // Added Nginx
-    
-    // Cloud
-    'AWS': Cloud,
-    'Oracle': Database,
-    'Azure Learning': CloudCog,
-    
-    // Scripting
-    'Shell Scripting': Terminal,
-    'Cron Jobs': Settings,
-    'Ansible Automation': CloudCog,
-    'Python Automation': Code2,
-    
+    Express: Server,
+    'Next.js': Globe,
+    'Nuxt.js': Globe,
+
     // Databases
-    'MySQL': Database,
-    'MongoDB': HardDrive,
-    'Firebase': Cloud,
-    'MariaDB': Database,
-    
-    // Tools
-    'Postman': Globe,
-    'Jira': Package,
-    'LaTeX': FileText,
+    MySQL: Database,
+    MongoDB: HardDrive,
+    'Firebase Firestore': Cloud,
+    MariaDB: Database,
+    Pinecone: Database,
+
+    // Cloud & Infrastructure
+    AWS: Cloud,
+    Azure: CloudCog,
+    GCP: Cloud,
+    Kubernetes: Container,
+    Docker: Container,
+    Terraform: Cloud,
+    Ansible: CloudCog,
+    Choreo: WorkflowIcon,
+    Nginx: Server,
+
+    // DevOps & Monitoring
+    Git: GitMerge,
+    'GitHub Actions': Workflow,
+    Jenkins: Settings,
+    'Argo CD': GitBranch,
+    Grafana: BarChart3,
+    Prometheus: Bot,
+    n8n: Workflow,
+
+    // Messaging, Integration & Security
+    'Apache Kafka': Network,
+    RabbitMQ: Network,
+    Eureka: Server,
+    'Circuit Breaker patterns': ShieldCheck,
+    Keycloak: ShieldCheck,
+    'Microservices architecture': Globe,
+
+    // AI/ML & Emerging Tech
+    'Generative AI': Bot,
+    'Large Language Models (LLMs)': Brain,
+    'Retrieval-Augmented Generation (RAG)': Binary,
+    MLOps: Bot,
+    'scikit-learn': Code2,
+    PyTorch: Zap,
+    TensorFlow: Zap,
+    CrewAI: Bot,
+    MCP: Globe,
+
+    // Scripting & Automation
+    Shell: Terminal,
+    'Cron Jobs': Settings,
+    'Automation workflows': Workflow,
+
+    // Tools & IDEs
+    Postman: Globe,
+    Jira: Package,
+    LaTeX: FileText,
     'VS Code': Monitor,
     'IntelliJ IDEA': Laptop,
     'Android Studio': Smartphone,
     'Arduino IDE': Cpu,
-    
-    // Platforms
-    'Windows': Monitor,
-    'Linux (Ubuntu, Kali)': Terminal,
-    'Arduino': Cpu,
-    'ESP8266': Zap,
-    'Raspberry Pi Learning': Cpu,
-    
+
+    // Platforms & Hardware
+    Windows: Monitor,
+    Linux: Terminal,
+    Arduino: Cpu,
+    ESP8266: Zap,
+    'Raspberry Pi': Cpu,
+
     // Soft Skills
     'Problem Solving': Lightbulb,
     'Critical Thinking': Target,
-    'Team Player': Users,
-    'Communication': MessageSquare,
-    'Continuous Learning': BookOpen
+    Teamwork: Users,
+    Communication: MessageSquare,
+    'Continuous Learning': BookOpen,
   };
 
   const techDetails = [
-    { icon: TerminalSquare, title: 'Languages', content: 'Python, JavaScript/TypeScript, Java, SQL, Go, Ballerina, KQL, Dart, C, C++, PHP, Rust Learning' },
-    { icon: Layers, title: 'Frameworks', content: 'NestJS, FastAPI, Flask, Flutter, NodeJS, Angular, Spring Boot, React, React Native, Express' },
-    { icon: Settings, title: 'DevOps Tools & Platforms', content: 'Git, Docker, GitHub Actions, Jenkins, Ansible, Terraform, Kubernetes, Argo CD learning, Nginx' }, // Added Nginx
-    { icon: Cloud, title: 'Cloud & Infrastructure', content: 'AWS, Oracle and Azure Learning' },
-    { icon: Wrench, title: 'Scripting & Automation', content: 'Shell Scripting, Cron Jobs, Ansible Automation, Python Automation' },
-    { icon: Database, title: 'Databases', content: 'MySQL, MongoDB, Firebase, MariaDB' },
-    { icon: MonitorCheck, title: 'Tools & IDEs', content: 'Postman, Jira, LaTeX, VS Code, IntelliJ IDEA, Android Studio, Arduino IDE' },
-    { icon: GitBranch, title: 'Platforms', content: 'Windows, Linux, Arduino, ESP8266, Raspberry Pi Learning' },
-    { icon: Brain, title: 'Soft Skills', content: 'Problem Solving, Critical Thinking, Team Player, Communication, Continuous Learning' }
+    {
+      icon: TerminalSquare,
+      title: 'Languages',
+      content:
+        'Python, JavaScript/TypeScript, Java, SQL, Go, Ballerina, KQL, Dart, C, C++, PHP',
+    },
+    {
+      icon: Layers,
+      title: 'Frameworks & Libraries',
+      content:
+        'NestJS, FastAPI, Flask, Flutter, Node.js, Angular, Spring Boot, React, React Native, Express, Next.js, Nuxt.js, YOLOv11',
+    },
+    {
+      icon: Database,
+      title: 'Databases',
+      content: 'MySQL, MongoDB, Firebase Firestore, MariaDB, Pinecone',
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud & Infrastructure',
+      content: 'AWS, Azure, GCP, Kubernetes, Docker, Terraform, Ansible, Choreo, Nginx',
+    },
+    {
+      icon: Settings,
+      title: 'DevOps & Monitoring',
+      content: 'Git, GitHub Actions, Argo CD, Jenkins, Grafana, Prometheus, n8n',
+    },
+    {
+      icon: Network,
+      title: 'Messaging, Integration & Security',
+      content:
+        'Apache Kafka, RabbitMQ, Eureka, Circuit Breaker patterns, Keycloak, Microservices architecture',
+    },
+    {
+      icon: Brain,
+      title: 'AI/ML & Emerging Tech',
+      content:
+        'Generative AI, Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), YOLOv11, MLOps, scikit-learn, PyTorch, TensorFlow, CrewAI, MCP',
+    },
+    {
+      icon: Wrench,
+      title: 'Scripting & Automation',
+      content: 'Shell, Cron Jobs, Automation workflows',
+    },
+    {
+      icon: MonitorCheck,
+      title: 'Tools & IDEs',
+      content: 'Postman, Jira, LaTeX, VS Code, IntelliJ IDEA, Android Studio, Arduino IDE',
+    },
+    {
+      icon: GitBranch,
+      title: 'Platforms & Hardware',
+      content: 'Windows, Linux, Arduino, ESP8266, Raspberry Pi',
+    },
+    {
+      icon: Brain,
+      title: 'Soft Skills',
+      content:
+        'Problem Solving, Critical Thinking, Teamwork, Communication, Continuous Learning',
+    },
   ];
 
   const parseSkills = (content: string) => {
-    return content.split(', ').map(skill => skill.trim());
+    return content.split(', ').map((skill) => skill.trim());
   };
 
   return (
-    <section id="skills" className={`py-20 ${darkMode ? 'bg-gray-900' : 'bg-gradient-to-b from-white via-blue-50 to-white'}`}>
+    <section
+      id="skills"
+      className={`py-20 ${
+        darkMode
+          ? 'bg-gray-900'
+          : 'bg-gradient-to-b from-white via-blue-50 to-white'
+      }`}
+    >
       <div className="container mx-auto px-6">
-
         <div className="text-center mb-16">
-          <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+          <h2
+            className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-4 ${
+              darkMode ? 'text-white' : 'text-gray-900'
+            }`}
+          >
             Skills & Technologies
           </h2>
-          <div className={`w-24 h-1 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full`}></div>
-          <p className={`text-lg ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+          <div
+            className={`w-24 h-1 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full`}
+          ></div>
+          <p
+            className={`text-lg ${
+              darkMode ? 'text-gray-400' : 'text-gray-600'
+            }`}
+          >
             Tools and tech I work with to bring ideas to life.
           </p>
         </div>
@@ -157,21 +254,27 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
                   : 'bg-white/80 backdrop-blur-md border border-gray-200 hover:border-blue-400 shadow-lg hover:shadow-xl'
               }`}
               style={{
-                animationDelay: `${index * 100}ms`
+                animationDelay: `${index * 100}ms`,
               }}
             >
               {/* Header with Icon and Title */}
               <div className="flex items-center gap-3 mb-4">
-                <div className={`p-3 rounded-xl ${
-                  darkMode ? 'bg-blue-500/20' : 'bg-blue-100'
-                }`}>
-                  <tech.icon className={`w-6 h-6 ${
-                    darkMode ? 'text-blue-400' : 'text-blue-600'
-                  }`} />
+                <div
+                  className={`p-3 rounded-xl ${
+                    darkMode ? 'bg-blue-500/20' : 'bg-blue-100'
+                  }`}
+                >
+                  <tech.icon
+                    className={`w-6 h-6 ${
+                      darkMode ? 'text-blue-400' : 'text-blue-600'
+                    }`}
+                  />
                 </div>
-                <h4 className={`text-xl font-bold ${
-                  darkMode ? 'text-white' : 'text-gray-900'
-                }`}>
+                <h4
+                  className={`text-xl font-bold ${
+                    darkMode ? 'text-white' : 'text-gray-900'
+                  }`}
+                >
                   {tech.title}
                 </h4>
               </div>
@@ -187,47 +290,54 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
                         : 'bg-gray-100 text-gray-700 hover:bg-blue-100 hover:text-blue-700'
                     }`}
                     style={{
-                      animationDelay: `${index * 100 + skillIndex * 50}ms`
+                      animationDelay: `${index * 100 + skillIndex * 50}ms`,
                     }}
                   >
-                    {techIcons[skill] && (() => {
-                      const IconComponent = techIcons[skill];
-                      return <IconComponent className="w-4 h-4" />;
-                    })()}
-                  <span
-                      className="whitespace-nowrap"
-                    >
-                      {skill}
-                    </span>
+                    {techIcons[skill] &&
+                      (() => {
+                        const IconComponent = techIcons[skill];
+                        return <IconComponent className="w-4 h-4" />;
+                      })()}
+                    <span className="whitespace-nowrap">{skill}</span>
                   </div>
                 ))}
               </div>
 
               {/* Skill Count Badge */}
               <div className="mt-4 flex justify-between items-center">
-                <span className={`text-sm ${
-                  darkMode ? 'text-gray-400' : 'text-gray-600'
-                }`}>
+                <span
+                  className={`text-sm ${
+                    darkMode ? 'text-gray-400' : 'text-gray-600'
+                  }`}
+                >
                   {parseSkills(tech.content).length} skills
                 </span>
-                <div className={`px-2 py-1 rounded-full text-xs font-medium ${
-                  darkMode ? 'bg-blue-500/20 text-blue-400' : 'bg-blue-100 text-blue-600'
-                }`}>
+                <div
+                  className={`px-2 py-1 rounded-full text-xs font-medium ${
+                    darkMode
+                      ? 'bg-blue-500/20 text-blue-400'
+                      : 'bg-blue-100 text-blue-600'
+                  }`}
+                >
                   {tech.title.split(' ')[0]}
                 </div>
               </div>
 
               {/* Hover Effect Overlay */}
-              <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl ${
-                darkMode
-                  ? 'bg-gradient-to-br from-blue-600/10 to-purple-600/10'
-                  : 'bg-gradient-to-br from-blue-50/50 to-purple-50/50'
-              }`} />
+              <div
+                className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl ${
+                  darkMode
+                    ? 'bg-gradient-to-br from-blue-600/10 to-purple-600/10'
+                    : 'bg-gradient-to-br from-blue-50/50 to-purple-50/50'
+                }`}
+              />
 
               {/* Decorative Corner */}
-              <div className={`absolute top-0 right-0 w-20 h-20 opacity-10 ${
-                darkMode ? 'text-blue-400' : 'text-blue-600'
-              }`}>
+              <div
+                className={`absolute top-0 right-0 w-20 h-20 opacity-10 ${
+                  darkMode ? 'text-blue-400' : 'text-blue-600'
+                }`}
+              >
                 <tech.icon className="w-full h-full transform rotate-12 translate-x-6 -translate-y-6" />
               </div>
             </div>
