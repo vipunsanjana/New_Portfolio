@@ -36,6 +36,7 @@ import {
   BarChart3,
   Bot,
   WorkflowIcon,
+  Coins,
 } from 'lucide-react';
 
 interface SkillsProps {
@@ -57,11 +58,13 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
     C: Code2,
     'C++': Code2,
     PHP: Server,
+    Rust: Zap,
 
     // Frameworks & Libraries
     NestJS: Server,
     FastAPI: Zap,
     Flask: Code2,
+    Anchor: Coins,
     Flutter: Smartphone,
     'Node.js': Server,
     Angular: Globe,
@@ -117,6 +120,7 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
     TensorFlow: Zap,
     CrewAI: Bot,
     MCP: Globe,
+    Solana: Coins,
 
     // Scripting & Automation
     Shell: Terminal,
@@ -152,13 +156,13 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
       icon: TerminalSquare,
       title: 'Languages',
       content:
-        'Python, JavaScript/TypeScript, Java, SQL, Go, Ballerina, KQL, Dart, C, C++, PHP',
+        'Python, JavaScript/TypeScript, Java, SQL, Go, Ballerina, KQL, Dart, C, C++, PHP, Rust',
     },
     {
       icon: Layers,
       title: 'Frameworks & Libraries',
       content:
-        'NestJS, FastAPI, Flask, Flutter, Node.js, Angular, Spring Boot, React, React Native, Express, Next.js, Nuxt.js, YOLOv11',
+        'NestJS, FastAPI, Flask, Flutter, Node.js, Angular, Spring Boot, React, React Native, Express, Next.js, Nuxt.js, YOLOv11, Anchor',
     },
     {
       icon: Database,
@@ -185,7 +189,7 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
       icon: Brain,
       title: 'AI/ML & Emerging Tech',
       content:
-        'Generative AI, Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), YOLOv11, MLOps, scikit-learn, PyTorch, TensorFlow, CrewAI, MCP',
+        'Generative AI, Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), YOLOv11, MLOps, scikit-learn, PyTorch, TensorFlow, CrewAI, MCP, Solana',
     },
     {
       icon: Wrench,
