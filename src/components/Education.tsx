@@ -11,7 +11,7 @@ const Education: React.FC<EducationProps> = ({ darkMode }) => {
       icon: GraduationCap,
       title: "B.Sc (Software Engineering) Hon's",
       institution: "University of Kelaniya - Faculty of Science",
-      year: "2022 - Present",
+      year: "completed Degree(Fresh Graduate)",
       stream: "Net Centric Applications domain, Mobile Computing Applications domain, Data Science and Engineering Applications domain"
     },
     {
@@ -21,6 +21,13 @@ const Education: React.FC<EducationProps> = ({ darkMode }) => {
       year: "2020",
       stream: "Physical Science",
       result: "A - Combined Maths | B - Physics | B - Chemistry, Z-Score - 1.6"
+    },
+    {
+      icon: GraduationCap,
+      title: "Diploma in Programming",
+      institution: "University of Azteca",
+      year: "Completed",
+      stream: "Programming, Web Development, Mobile App Development, Database Management, Software Testing, Data Science, Machine Learning"
     },
     {
       icon: BadgeCheck,
@@ -41,13 +48,6 @@ const Education: React.FC<EducationProps> = ({ darkMode }) => {
         "Kubernetes", "Shell Scripting", "Jenkins", "Docker",
         "Microsoft Azure", "CI/CD", "AWS"
       ]
-    },
-    {
-      icon: BadgeCheck,
-      title: "Computer Software Engineering Certification",
-      institution: "Miha Institute",
-      year: "Feb 2023 - Aug 2023",
-      skills: ["MongoDB", "Flutter", "JavaScript"]
     },
     {
       icon: BadgeCheck,

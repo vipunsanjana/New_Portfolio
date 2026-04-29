@@ -7,35 +7,46 @@ interface ExperienceProps {
 
 const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
   const experiences = [
-  {
-    title: 'Former Intern - Software Engineer',
-    company: 'WSO2 Cloud Security Operations Center',
-    location: 'Colombo',
-    period: 'Oct 2024 - Apr 2025',
-    description: 'Contributed to cloud security initiatives with a focus on automation, observability, and scalable backend and frontend solutions.',
-    achievements: [
-      'Built monitoring dashboards using Azure Log Analytics and Firebase',
-      'Worked on secure API integration using Ballerina and Choreo platform',
-      'Assisted in backend and frontend development with scalable cloud-first architecture'
-    ],
-    technologies: ['Python', 'Ballerina', 'React', 'Docker', 'MongoDB', 'Firebase', 'Choreo', 'MySQL', 'Azure', 'Log Analytics']
-  },
-  {
-    title: 'Software Developer',
-    company: 'Crytec Labs',
-    location: 'Remote',
-    period: 'Feb 2024 - Aug 2024',
-    description: 'Developed and maintained backend services for internal products using NestJS and modern TypeScript stack.',
-    achievements: [
-      'Designed RESTful APIs with NestJS and integrated with MySQL databases',
-      'Improved backend response time by optimizing middleware and query layers',
-      'Collaborated with frontend teams to deliver end-to-end features'
-    ],
-    technologies: ['NestJS', 'TypeScript', 'MySQL']
-  },
-  
-];
-
+    {
+      title: 'Software Engineer',
+      company: 'Ifinity Global (NCINGA)',
+      location: 'Colombo',
+      period: 'Nov 2025 - Present',
+      description: 'Developing scalable software solutions and collaborating with cross-functional teams to deliver high-quality fintech and enterprise products.',
+      achievements: [
+        'Designing and implementing robust backend architectures and APIs',
+        'Collaborating with agile teams to streamline development workflows',
+        'Enhancing application performance, security, and system reliability'
+      ],
+      technologies: ['React', 'Node.js', 'TypeScript', 'Microservices', 'Python', 'AWS', 'Docker', 'Kubernetes', 'MongoDB', 'MySQL','GitHub Actions', 'WSO2 APIM', 'WSO2 MI', 'WSO2 IAM']
+    },
+    {
+      title: 'Former Intern - Software Engineer',
+      company: 'WSO2 Cloud Security Operations Center',
+      location: 'Colombo',
+      period: 'Oct 2024 - Apr 2025',
+      description: 'Contributed to cloud security initiatives with a focus on automation, observability, and scalable backend and frontend solutions.',
+      achievements: [
+        'Built monitoring dashboards using Azure Log Analytics and Firebase',
+        'Worked on secure API integration using Ballerina and Choreo platform',
+        'Assisted in backend and frontend development with scalable cloud-first architecture'
+      ],
+      technologies: ['Python', 'Ballerina', 'React', 'Docker', 'MongoDB', 'Firebase', 'Choreo', 'MySQL', 'Azure', 'Log Analytics']
+    },
+    {
+      title: 'Software Developer',
+      company: 'Crytec Labs',
+      location: 'Remote',
+      period: 'Feb 2024 - Aug 2024',
+      description: 'Developed and maintained backend services for internal products using NestJS and modern TypeScript stack.',
+      achievements: [
+        'Designed RESTful APIs with NestJS and integrated with MySQL databases',
+        'Improved backend response time by optimizing middleware and query layers',
+        'Collaborated with frontend teams to deliver end-to-end features'
+      ],
+      technologies: ['NestJS', 'TypeScript', 'MySQL']
+    },
+  ];
 
   return (
     <section id="experience" className={`py-20 ${

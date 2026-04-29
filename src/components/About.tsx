@@ -8,7 +8,7 @@ interface AboutProps {
 const About: React.FC<AboutProps> = ({ darkMode }) => {
   const stats = [
     { icon: Code, label: 'Projects Completed', value: '100+', color: 'from-blue-500 to-cyan-500' },
-    { icon: Users, label: 'Happy Clients', value: '5+', color: 'from-green-500 to-emerald-500' },
+    { icon: BookOpen, label: 'Courses & Certs', value: '25+', color: 'from-green-500 to-emerald-500' },
     { icon: Heart, label: 'Years of Experience', value: '5+', color: 'from-purple-500 to-pink-500' },
     { icon: Award, label: 'Technologies Mastered', value: '20+', color: 'from-orange-500 to-red-500' }
   ];
@@ -79,19 +79,19 @@ const About: React.FC<AboutProps> = ({ darkMode }) => {
                 <p className={`text-base leading-relaxed ${
                   darkMode ? 'text-gray-300' : 'text-gray-600'
                 }`}>
-                  I'm <span className="font-semibold text-blue-500">Vipun Sanjana</span>, a final year Software Engineering student at the University of Kelaniya and former Software Engineer Intern at <span className="font-semibold text-purple-500">WSO2</span>. My passion lies in creating innovative solutions that bridge complex technical challenges with user-friendly experiences.
+                  I'm <span className="font-semibold text-blue-500">Vipun Sanjana</span>, a recent Software Engineering graduate from the University of Kelaniya, currently crafting scalable solutions as a Software Engineer at <span className="font-semibold text-purple-500">Ifinity Global (NCINGA)</span>. Building on my foundational experience at WSO2, my passion lies in architecting robust systems that bridge complex technical challenges with seamless user experiences.
                 </p>
                 
                 <p className={`text-base leading-relaxed ${
                   darkMode ? 'text-gray-300' : 'text-gray-600'
                 }`}>
-                  Currently diving deep into <span className="font-semibold text-green-500">DevOps</span> and <span className="font-semibold text-orange-500">Machine Learning</span>, I'm constantly pushing boundaries to learn and build impactful systems. My journey started with curiosity and has evolved into a career driven by continuous learning and excellence.
+                  With a strong drive for innovation, I continuously dive deep into <span className="font-semibold text-green-500">DevOps</span>, modern backend architectures, and <span className="font-semibold text-orange-500">Machine Learning</span>. My journey started with pure curiosity and has rapidly evolved into a career fueled by continuous learning, agile development, and a commitment to engineering excellence.
                 </p>
                 
                 <p className={`text-base leading-relaxed ${
                   darkMode ? 'text-gray-300' : 'text-gray-600'
                 }`}>
-                  When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community. I believe in writing clean, maintainable code that makes a real difference.
+                  When I'm not writing code, you'll find me exploring emerging tech trends, contributing to open-source ecosystems, or sharing insights with the developer community. I firmly believe in writing clean, maintainable code that drives real-world impact and scales for the future.
                 </p>
               </div>
             </div>

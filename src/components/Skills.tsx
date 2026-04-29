@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   TerminalSquare,
   Layers,
@@ -109,6 +110,9 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
     'Circuit Breaker patterns': ShieldCheck,
     Keycloak: ShieldCheck,
     'Microservices architecture': Globe,
+    'WSO2 API Manager': Network,
+    'WSO2 Micro Integrator': Workflow,
+    'WSO2 IAM': ShieldCheck,
 
     // AI/ML & Emerging Tech
     'Generative AI': Bot,
@@ -183,7 +187,7 @@ const Skills: React.FC<SkillsProps> = ({ darkMode }) => {
       icon: Network,
       title: 'Messaging, Integration & Security',
       content:
-        'Apache Kafka, RabbitMQ, Eureka, Circuit Breaker patterns, Keycloak, Microservices architecture',
+        'Apache Kafka, RabbitMQ, Eureka, Circuit Breaker patterns, Keycloak, Microservices architecture, WSO2 API Manager, WSO2 Micro Integrator, WSO2 IAM',
     },
     {
       icon: Brain,
