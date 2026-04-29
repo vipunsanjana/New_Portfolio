@@ -8,6 +8,56 @@ interface ProjectsProps {
 const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
   const projects = [
     {
+      title: 'NDB Bank API Integration Platform',
+      description: 'Developed and deployed secure API gateways to facilitate seamless communication between core banking systems and third-party services. Applied advanced security policies, optimized payload routing, and enabled detailed API analytics.',
+      image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['WSO2 API Manager', 'WSO2 Micro Integrator', 'JSON/XML', 'Postman', 'Security Policies'],
+      githubUrl: 'Private Repository',
+      date: '2026',
+      category: 'Enterprise Integration',
+      deployment: 'Production Live'
+    },
+    {
+      title: 'Tradesteam Backend Web Services',
+      description: 'Architected and developed scalable, high-performance backend web services using Python to handle complex business logic and data processing for the Tradesteam financial platform.',
+      image: 'https://images.pexels.com/photos/7567565/pexels-photo-7567565.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['Python', 'FastAPI', 'RESTful Architecture', 'MongoDB', 'Docker', 'Microservices'],
+      githubUrl: 'Private Repository',
+      date: '2026',
+      category: 'Backend Development',
+      deployment: 'Production Live'
+    },
+    {
+      title: 'DFCC Bank API Management Gateway',
+      description: 'Designed and implemented an enterprise-grade API Management solution to securely expose and manage core banking APIs. Focused on high availability, robust rate limiting, and secure authentication for fintech integrations.',
+      image: 'https://images.pexels.com/photos/259209/pexels-photo-259209.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['WSO2 API Manager', 'OAuth 2.0', 'REST APIs', 'Linux', 'Performance Tuning'],
+      githubUrl: 'Private Repository',
+      date: '2025',
+      category: 'Enterprise Integration & Fintech',
+      deployment: 'Production Live'
+    },
+    {
+      title: 'Cambodian Banking APIM Migration',
+      description: 'Spearheaded the complex migration of legacy banking API gateways to a modernized WSO2 API Management platform. Ensured zero-downtime transition, handled environment synchronization, and established automated deployment pipelines.',
+      image: 'https://images.pexels.com/photos/730564/pexels-photo-730564.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['WSO2 API Manager', 'CI/CD', 'Bash Scripting', 'API Migration', 'Python', 'Oracle DB'],
+      githubUrl: 'Private Repository',
+      date: '2025',
+      category: 'System Migration',
+      deployment: 'Production Live'
+    },
+    {
+      title: 'Sampath Bank IAM Version Migration',
+      description: 'Executed a comprehensive Identity and Access Management (IAM) migration for banking systems. Configured secure authentication flows, Single Sign-On (SSO), and role-based access control to ensure strict compliance with banking security standards.',
+      image: 'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800',
+      technologies: ['WSO2 IAM', 'SSO', 'OAuth 2.0', 'OpenID Connect', 'SAML', 'Active Directory'],
+      githubUrl: 'Private Repository',
+      date: '2026',
+      category: 'Cybersecurity & IAM',
+      deployment: 'Production Live'
+    },
+    {
       title: 'Phishing Analysis & First-Response Automation',
       description: 'Comprehensive research project implementing automated phishing detection and response systems. Features real-time threat analysis, automated incident response workflows, and integration with multiple security platforms.',
       image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800',
@@ -17,7 +67,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
       category: 'Research',
       deployment: 'Choreo Platform'
     },
-    {
+    { 
       title: 'University Z-Score Analysis System',
       description: 'Advanced analytics platform analyzing island-wide Z-score data to recommend suitable university courses. Features comprehensive data processing, predictive analytics, and responsive course recommendation engine.',
       image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800',

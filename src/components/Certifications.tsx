@@ -7,6 +7,31 @@ interface CertificationsProps {
 
 const Certifications: React.FC<CertificationsProps> = ({ darkMode }) => {
   const licenses = [
+
+    {
+      title: 'WSO2 Certified API Manager Practitioner',
+      issuer: 'WSO2',
+      date: '2025', 
+      logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmGByEp52_kM5WCSW0Bpw3eK6IdIh6l7nHaA&s',
+      skills: ['API Management', 'API Gateway', 'OAuth 2.0', 'API Security', 'Rate Limiting'],
+      verifyUrl: 'https://certification.wso2.com/certificate/CID-05204119/a09VM00000DldhZYAR', 
+    },
+    {
+      title: 'WSO2 Certified Micro Integrator Practitioner',
+      issuer: 'WSO2',
+      date: '2025', 
+      logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmGByEp52_kM5WCSW0Bpw3eK6IdIh6l7nHaA&s',
+      skills: ['Enterprise Integration', 'ESB', 'Message Routing', 'Data Transformation', 'Microservices'],
+      verifyUrl: 'https://certification.wso2.com/certificate/CID-05204119/a09VM00000Djo7dYAB', 
+    },
+    {
+      title: 'WSO2 Certified Identity Server Practitioner',
+      issuer: 'WSO2',
+      date: '2026', 
+      logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmGByEp52_kM5WCSW0Bpw3eK6IdIh6l7nHaA&s',
+      skills: ['Identity & Access Management', 'SSO', 'SAML', 'OpenID Connect', 'Role-Based Access Control'],
+      verifyUrl: 'https://certification.wso2.com/certificate/CID-05204119/a09VM00000F2hZhYAJ', 
+    },
     {
       title: 'Getting Started With Ansible',
       issuer: 'Simplilearn',
